@@ -1,0 +1,1153 @@
+@media only screen and ( max-width:  1033px)
+    .container
+        width: 95.874%
+        overflow: hidden
+
+    #hide,
+    #hideCard
+        display: none
+    .header
+        padding: 10px 0
+        &__mobil-btn.active
+            transition: .3s all
+            height: 20px
+            .header__mobil-btn-top
+                transform: rotate(45deg)
+                top: 50%
+            .header__mobil-btn-custom
+                transform: rotate(-45deg)
+                transition: .3s all
+                width: 100%
+                top: 50%
+            &::before,
+            &::after
+                opacity: 0
+                transition: .1s all
+        &__mobil-btn
+            display: block
+            cursor: pointer
+            margin-right: 20px
+            width: 24px
+            height: 9.5px
+            transition: .3s all
+            &-top
+                width: 100%
+                background-color: #1A1A1A
+                height: 1.5px
+                position: absolute
+                cursor: pointer
+                transition: .3s all
+            &-custom
+                width: 16px
+                background-color: #1A1A1A
+                height: 1.5px
+                position: absolute
+                cursor: pointer
+                top: 50%
+                transform: translateY(-50%)
+                transition: .3s all
+            &::before,
+            &::after
+                content: ''
+                display: block
+                position: absolute
+                bottom: 0
+                left: 0
+                height: 1.5px
+                width: 8px
+                background-color: #1A1A1A
+                transition: .1s all
+                opacity: 1
+            &::after
+                height: 2px
+                width: 2px
+                border-radius: 50%
+                left: 9px
+
+        &__list
+            display: none
+        &__wrapper
+            display: flex
+            justify-content: space-between
+            margin: 0
+        &__logo
+            padding: 0
+            svg
+                width: 165px
+                height: 30px
+        &__search-basket
+            padding: 0
+            margin: 0 -10px
+            &-btn
+                padding: 0 10px
+                svg
+                    width: 24px
+                    height: 24px
+        &__change-language
+            margin: 0 -7.5px
+            padding: 0 80px
+            &-btn
+                padding: 0 7.5px
+                p
+                    font-weight: 300
+                    font-size: 16px
+                    line-height: 18px
+        .search-panel
+            right: 2%
+            width: 96%
+            &__input
+                width: 75%
+                font-size: 14px
+                line-height: 16px
+                &::placeholder
+                    font-size: 14px
+                    line-height: 16px
+            &__btn
+                width: 25%
+    .mobile__menu.active
+        top: 50px
+        transition: .3s all
+    .mobile__menu
+        display: block
+        position: absolute
+        width: 320px
+        height: auto
+        padding: 20px 24px
+        background-color: #fff
+        z-index: 9
+        top: -220px
+        left: -1px
+        transition: .3s all
+        border: 1px solid #1A1A1A
+        &__wrapper.active
+            height: 100vh
+        &__wrapper
+            height: 0
+            display: block
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background-color: rgba(0,0,0,0)
+            z-index: 8
+        &__list
+            list-style: none
+            &-item
+                margin-bottom: 15px
+                &:last-child
+                    margin-bottom: 0
+        &__link
+            text-decoration: none
+            font-size: 16px
+            line-height: 18px
+            color: #1A1A1A
+            text-decoration: underline
+            text-decoration-color: transparent
+            transition: .3s all
+            cursor: pointer
+            display: inline-block
+            span
+                font-size: 20px
+                font-weight: 100
+            &:hover
+                text-decoration: underline
+                text-decoration-color: #1A1A1A
+                transition: .3s all
+        &__change-language
+            display: none
+    
+    .basket.active
+        top: 50px
+    .basket
+        right: 0
+    .preview
+        padding: 123px 0 122px 2px
+        &__title
+            font-size: 48px
+            line-height: 100%
+            width: 100%
+            span
+        &__wrapper
+            margin-top: 11px
+            width: 100%
+            &-text
+                font-size: 18px
+                line-height: 21px
+    .about-company
+        padding: 60px 0
+        overflow-x: hidden
+        &__title
+            font-size: 28px
+            line-height: 32px
+            margin-bottom: 29px
+        &__descr
+            font-size: 16px
+            line-height: 140%
+            margin-top: 13px
+        &__img
+            display: none
+            &-medium
+                display: none
+            &-tablet
+                display: block
+        &__wrapperv
+    .catalog
+        padding: 0 0 59px 0
+        &__title
+            font-size: 28px
+            line-height: 32px
+        &__cards-block
+            margin: 11px -10px 0 -10px
+        &__card
+            width: 33.33%
+            margin-top: 20px
+            padding: 0 10px
+            height: 200px
+            &-wrapper
+                padding: 15px 8px 15px 15px
+            &-img
+                margin: 0 auto
+                height: 145px
+                &-desc
+                    display: none
+                &-tablet
+                    display: block
+                    margin: 0 auto
+            &-img.ind
+                height: 145px
+            &-descr
+                font-size: 16px
+                line-height: 18px
+                margin-top: 5px
+            &-descr.ind
+                margin-top: -13px
+    .howtobuy
+        padding: 39px 0
+        &__wrapper
+            margin: 40px -10px 0 -10px
+        &__title
+            font-size: 28px
+            line-height: 32px
+        &__descr
+            p
+                font-size: 18px
+                line-height: 21px
+    .brands
+        padding: 60px 0 30px 0
+        &__title
+            font-size: 28px
+            line-height: 32px
+        &__link
+            p
+                font-size: 14px
+                line-height: 16px
+            img
+                width: 16px
+                height: 12px
+        &__wrapper
+            margin: 30px -20px 0 -20px
+        &__item
+            padding: 0 20px 
+            img
+                width: 150px
+    .works
+        padding: 27px 0 80px 0
+        &__title
+            font-size: 28px
+            line-height: 32px
+        &__link
+            p
+                font-size: 14px
+                line-height: 16px
+            img
+                width: 16px
+                height: 12px
+        &__img
+            &-container
+                padding: 50.5px 22.5px
+        &__wrapper
+            margin: 30px -10px 0 -10px
+        &__card
+            width: 33.33%
+            padding: 0 10px
+            &:last-child
+                display: none
+            &-modal
+                font-size: 12px
+                line-height: 14px
+                margin-top: 17px
+            &-descr
+                font-size: 16px
+                line-height: 18px
+                margin-top: 15px
+                width: 100%
+            &-price
+                font-size: 16px
+                line-height: 18px
+                margin-top: 15px
+            &-addToBasket
+                font-size: 14px
+                line-height: 16px
+                margin-top: 20px
+                span
+                    display: none
+        &__icon
+            width: 30px
+            height: 30px
+    .footer
+        padding: 40px 0
+        &__title
+            font-size: 18px
+            line-height: 21px
+        &__item
+            &__link
+                font-size: 16px
+                line-height: 18px
+        &__logo
+            img
+                width: 165px
+                height: 31px
+        &__moreinfo
+            margin-top: 41px
+        &__copyright
+            p
+                font-size: 14px
+                line-height: 16px
+        &__date
+            padding-left: 48px
+            p
+                font-size: 14px
+                line-height: 16px
+                padding-right: 2px
+        &__prodaction
+            &-content
+                p
+                    font-size: 14px
+                    line-height: 16px
+
+
+
+            // 
+    .directory
+        padding: 19px 1px
+    .vent
+        padding: 30px 0 20px 0
+        .catalog__card
+            padding: 0 10px
+            height: 390px 
+            &-wrapper
+                padding: 15px 0 0 0
+            &-descr
+                padding: 3px 0 14px 13px
+            &-descr.over
+                margin-top: -13px
+        &__cards-block
+            margin: 20px -10px 0 -10px
+    .plumbing
+        &__cards-block
+            margin: 1px -10px 0 -10px
+        .catalog__card
+            padding: 0 10px
+            height: 368px 
+            &-wrapper
+                padding: 15px 0 0 0
+            &-descr
+                padding: 0 0 14px 13px
+            &-descr.over
+                margin-top: -13px
+    .accordion
+        &__wrapper
+            width: 91.5%
+            min-height: 170px
+            padding: 11px 15px
+        &__hidden
+            &__link
+                a
+                    font-size: 14px
+                    line-height: 16px
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 1
+                    -webkit-box-orient: vertical
+
+    .info
+        padding: 37px 0 110px 0
+        &__text
+            width: 98%
+            p
+                line-height: 138%
+
+    .product
+        &__info
+            padding: 20px 20px 16px 36px
+            &-block
+                &-title
+                    margin-top: 20px
+        &__list
+            &-block
+                width: 33.33%
+    .catalog-cards
+        &-navigation
+            margin-top: 38px
+        &-block
+            margin: -10px
+            margin-top: 0
+            &-item
+                width: 33.33%
+                padding: 11px 10px
+                &:nth-child(10),
+                &:nth-child(11),
+                &:nth-child(12)
+                    display: none
+                &-img
+                    padding: 16px 0
+    .back-to-page 
+        padding: 20px 0 30px 0
+                    
+    .item__catalog
+        &-cards
+            &-block
+                &-item
+                    padding: 10.5px 10px
+        &__filter-block
+            display: none
+        &__content-block
+            width: 100%
+            padding: 0 0 78px 0
+            .catalog-cards-block
+                margin: -10px
+                margin-top: 5px
+            .catalog-cards-navigation
+                margin-top: 42px
+            &-filters
+                display: none
+                &-show-items-mobile
+                    display: flex
+                    flex-wrap: wrap
+                    margin-top: 15px
+                &-show-item-mobile
+                    display: flex
+                    align-items: center
+                    padding: 5px 10px
+                    background-color: #1A1A1A
+                    p
+                        margin-right: 8px
+                        font-size: 14px
+                        line-height: 16px
+                        color: #FFFFFF
+
+                    a
+                        text-decoration: none
+                        color: #fff
+                        font-size: 12px
+            &-mobile
+                display: block
+                .item__catalog__content-block-filters-sort
+                    display: none
+                &-filters
+                    display: flex
+                    padding: 37px 0 0 0
+                    justify-content: space-between
+                    align-items: start
+                &-filter
+                    &-main
+                        height: auto
+                        &-btn
+                            width: 290px
+                            height: 45px
+                            background: #F8F8F8
+                            border-radius: 2px
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            padding: 12px 0
+                            cursor: pointer
+                            p
+                                font-weight: 500
+                                font-size: 18px
+                                line-height: 21px
+                                color: #1A1A1A
+                            img
+                                width: 16px
+                                height: 16px
+                                margin-right: 10px
+                        &-content
+                            height: auto
+                            overflow: hidden
+                            transition: .3s all
+                            margin-top: 4px
+                            position: absolute
+                            width: 290px
+                            z-index: 1
+                            
+                        &__kind
+                            background-color: #F8F8F8
+                            &__title.active
+                                span
+                                    &::before
+                                        transform: rotate(-45deg)
+                                        transition: .3s all
+                                    &::after
+                                        transform: rotate(45deg)
+                                        transition: .3s all
+                            &__title
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                padding: 17px 15px
+                                cursor: pointer
+                                p   
+                                    font-weight: 500
+                                    font-size: 16px
+                                    line-height: 18px
+                                    color: #1A1A1A
+                                    display: block
+                                span
+                                    width: 10px
+                                    height: 5px
+                                    display: block
+                                    &::before,
+                                    &::after
+                                        content: ''
+                                        display: block
+                                        position: absolute
+                                        width: 5px
+                                        height: 1px
+                                        background-color: #1A1A1A
+                                        top: 50%
+                                    &::before
+                                        transform: rotate(-135deg)
+                                        transition: .3s all
+                                        left: 1px
+                                    &::after
+                                        transform: rotate(135deg)
+                                        transition: .3s all
+                                        right: 1px
+                            &__descr
+                                height: auto
+                                padding: 0 15px 0 15px
+                                overflow: hidden
+                                list-style: none
+                                transition: .3s all
+                                &-link
+                                    padding: 3px 0
+                                    display: block
+                                    white-space: nowrap
+                                    overflow: hidden
+                                    text-overflow: ellipsis
+                                    &:first-child
+                                        padding: 0 0 3px 0
+                                    &:last-child
+                                        padding: 3px 0 15px 0
+                                    a
+                                        font-weight: 400
+                                        font-size: 16px
+                                        line-height: 140%
+                                        color: #1A1A1A
+                                        text-decoration: underline
+                                        text-decoration-color: transparent
+                                        transition: .3s all
+                                        &:hover
+                                            text-decoration: underline
+                                            text-decoration-color: #1A1A1A
+                                            transition: .3s all
+                        &__manufacturer,
+                        &__version
+                            background-color: #F8F8F8
+                            label.checkcontainer 
+                                width: 100%
+                                display: flex
+                                align-items: center
+                                position: relative
+                                cursor: pointer
+                                font-style: normal
+                                font-weight: normal
+                                -webkit-user-select: none
+                                -moz-user-select: none
+                                -ms-user-select: none
+                                user-select: none
+                                padding-bottom: 5px
+                                &:last-child
+                                    padding-bottom: 15px
+                                &.radio 
+                                    .checkmark 
+                                        border-radius: 50%
+                                        &::after 
+                                            border: none
+                                            width: 8px
+                                            height: 8px
+                                            background: #fff
+                                            border-radius: 50%
+                                &.error 
+                                    .checkmark 
+                                        border-color: #fff
+                                &.success 
+                                    .checkmark 
+                                        border-color: #fff
+                                &.warning 
+                                    .checkmark 
+                                        border-color: #fff
+
+                            input 
+                                position: absolute
+                                opacity: 0
+                                cursor: pointer
+                                height: 0
+                                width: 0
+                                &:checked ~ .checkmark 
+                                    background-color: white
+                                    &::after 
+                                        opacity: 1
+                                        transition: all 300ms ease
+                                    
+                                
+
+                                &:hover input ~ .checkmark 
+                                    background-color: #fff
+                                    transition: all 300ms
+
+                            .checkmark 
+                                float: left
+                                left: 0px
+                                top: 50%
+                                height: 16px
+                                width: 16px
+                                box-sizing: border-box
+                                background-color: #FFFFFF
+                                border: none
+                                border-radius: 2px
+                                border: 1px solid #1A1A1A
+                                position: relative
+                                transition: all 300ms
+                                &::after 
+                                    content: ""
+                                    position: absolute
+                                    display: inline-block
+                                    opacity: 0
+                                    left: 50%
+                                    top: 50%
+                                    width: 2px
+                                    height: 6px
+                                    border: solid #000
+                                    border-width: 0 2px 2px 0
+                                    -webkit-transform: translate(-50%, -50%) rotate(45deg)
+                                    -ms-transform: translate(-50%, -50%) rotate(45deg)
+                                    transform: translate(-50%, -50%) rotate(45deg)
+                                    transition: all 300ms ease
+                                
+
+                            .name 
+                                margin: 0
+                                float: left
+                                font-weight: 400
+                                font-size: 18px
+                                line-height: 140%
+                                color: #1A1A1A
+                                width: calc(100% - 16px - 10px)
+                                margin-left: 10px
+                            &__title.active
+                                span
+                                    &::before
+                                        transform: rotate(-45deg)
+                                        transition: .3s all
+                                    &::after
+                                        transform: rotate(45deg)
+                                        transition: .3s all
+                            &__title
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                padding: 15px
+                                cursor: pointer
+                                p
+                                    font-weight: 500
+                                    font-size: 16px
+                                    line-height: 18px
+                                    color: #1A1A1A
+                                span
+                                    width: 10px
+                                    height: 5px
+                                    display: block
+                                    &::before,
+                                    &::after
+                                        content: ''
+                                        display: block
+                                        position: absolute
+                                        width: 5px
+                                        height: 1px
+                                        background-color: #1A1A1A
+                                        top: 50%
+                                    &::before
+                                        transform: rotate(-135deg)
+                                        transition: .3s all
+                                        left: 1px
+                                    &::after
+                                        transform: rotate(135deg)
+                                        transition: .3s all
+                                        right: 1px
+                            &__descr
+                                height: auto
+                                padding: 0 15px 0 15px
+                                overflow: hidden
+                                list-style: none
+                                transition: .3s all
+                                &-input
+                                    padding: 2.5px 0
+                                    &:first-child
+                                        padding: 0 0 2.5px 0
+                                    &:last-child
+                                        padding: 2.5px 0 15px 0
+                                    label
+                                        font-weight: 400
+                                        font-size: 16px
+                                        line-height: 140%
+                                        color: #1A1A1A
+                                        display: flex
+                                        align-items: center
+                                        &::before
+                                            content: ''
+                                            display: flex
+                                            align-items: center
+                                            justify-content: center
+                                            position: relative
+                                            width: 16px
+                                            height: 16px
+                                            border-radius: 2px
+                                            border: 1px solid #1A1A1A
+                                            margin-right: 10px
+                                            cursor: pointer
+                                    input[type=checkbox]
+                                        display: none
+                                    input[type=checkbox]:checked
+                                        label
+                                            &::before
+                                                content: '✓'
+                                                color: #fff
+                                                background-color: #1A1A1A
+                                                font-size: 12px
+                        &__accept
+                            display: block
+                            background-color: #1A1A1A
+                            width: 290px
+                            padding: 13px 0
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 16px
+                            color: #FFFFFF
+                            border: none
+                            outline: none
+                            border-radius: 0px 0px 2px 2px
+                            cursor: pointer
+                            transition: .3s all
+                            &:hover,
+                            &:active
+                                transition: .3s all
+                                background-color: #252525
+                        &-sort
+                            .item__catalog__content-block-filters-sort
+                                width: 100%
+                                padding-top: 28px
+                                display: flex
+    .product-card
+        padding: 0 0 35px 0
+        margin-top: -22px
+        .slick-dotted.slick-slider
+                margin-bottom: 0 
+        .product-card__dots
+            bottom: -49px
+        &__slider
+            .slick-prev
+                left: -27px
+            .slick-next
+                right: -27px
+            .slick-prev,
+            .slick-next
+                top: 49.5%
+            &__wrapper
+                width: 350px
+                padding: 70.5px 41px
+            &__item
+                height: 209px
+        &__text
+            padding-left: 20px
+            &__sizes
+                &__accordion
+                    padding: 13px 0
+                    height: 50px
+                    &::after
+                        height: 8px
+            &__vendor__block,
+            &__manufacturer__block,
+            &__category__block,
+            &__number__block,
+            &__title__block,
+            &__link__block,
+            &__version__block
+                margin-top: 7px
+        &__wrapper
+            margin-top: 21px
+            &__price.worksPrice
+                margin-top: 20px
+            
+        &__description
+            padding: 40px 0 0 0
+    .similar
+        .slick-prev
+            right: 164px
+        .similar__dots
+            right: 3.5%
+            transform: translateX(0)
+            top: -41px
+        .slick-list
+            margin: 0 -10px
+        &__slider
+            &__item 
+                padding: 0 10px
+                &-wrapper
+                    width: 226px
+                &-img
+                    padding: 26px 0
+    .yousee
+        padding: 40px 0 48px 0
+        .slick-prev,
+        .slick-next
+            top: -35px
+        .slick-prev
+            right: 164px
+        .similar__dots
+            right: 3.5%
+            transform: translateX(0)
+            top: -40px
+        .similar__slider
+            display: block
+        &__slider
+            display: none
+            &__inner__item.big
+                .yousee__slider__item-text-descr
+                    overflow: hidden
+                    display: -webkit-box
+                    -webkit-line-clamp: 2
+                    -webkit-box-orient: vertical
+        .slick-list
+            margin: 0 -10px
+    .myworks
+        &__searchpanel
+            width: 100%
+            height: 45px
+            margin-top: 20px
+            &__btn
+                background-color: transparent
+                z-index: 2
+                position: absolute
+                border: none
+                right: 15px
+                top: 50%
+                transform: translateY(-50%)
+                cursor: pointer
+        &__block
+            padding: 25px 0 40px 0
+            .item__catalog__content-block-filters-sort
+                width: 100%
+            .catalog-cards-navigation
+                margin-top: 41px
+            &__slider
+                margin-top: 15px
+                &__inner
+                    display: none
+                    &__mobile
+                        display: flex
+                        flex-wrap: wrap
+                        margin: -13px -10px
+                    &__item
+                        padding: 13px 10px
+                        width: 33.33%
+                &__item
+                    &-wrapper
+                        width: 100%
+                        height: auto
+                    &-img
+                        border: 1px solid #EFEFEF
+                        border-radius: 2px
+                        padding: 48px 15px
+                        &-main
+                            width: 100%
+                    &-text
+                        margin-top: 15px
+                        &-title
+                            font-size: 12px
+                            line-height: 14px
+                        &-descr
+                            font-size: 16px
+                            line-height: 18px
+                        &-price
+                            font-size: 16px
+                            line-height: 18px
+                        &-btn
+                            padding: 14.5px 0
+                            font-size: 14px
+                            line-height: 16px
+        &__text
+            padding: 0 0 77px 0
+            &__title
+                font-size: 28px
+                line-height: 32px
+            &__descr
+                font-size: 16px
+                line-height: 140%
+                margin-top: 30px
+            &__subdescr
+                font-size: 16px
+                line-height: 140%
+                margin-top: 13.5px
+    #myworks__searchpanel__input
+        font-size: 14px
+        line-height: 16px
+        &::placeholder
+            font-size: 14px
+            line-height: 16px
+    
+    .not-found
+        &__wrapper
+            padding: 34.5px 123px 36.5px 123px
+        &__img
+            width: 100%
+        &__btn
+            font-size: 14px
+            line-height: 16px
+            padding: 14.5px 0
+            width: 226px
+            height: 45px
+
+    .order
+        padding: 20px 0 39px 0
+        &__wrapper
+            display: flex
+            flex-wrap: wrap
+        &__text
+            width: 66%
+        &__img
+            width: 34%
+            display: flex
+            align-items: center
+            justify-content: end
+            padding: 0
+            img
+                width: 227px
+                display: block
+        &__title
+            font-size: 28px
+            line-height: 32px
+        &__descr
+            margin-top: 30px
+            p
+                font-size: 16px
+                line-height: 139%
+                margin-top: 13px
+                &:last-child
+                    display: none
+        &__btn
+            width: 288px
+            height: 45px
+            padding: 10.5px 0
+            display: flex
+            align-items: center
+            justify-content: center
+            background: #29A9EB
+            border: none
+            border-radius: 2px
+            margin-top: 29px
+            p
+                font-size: 14px
+                line-height: 16px
+            img
+                width: 24px
+                height: 24px
+    .examples
+        padding: 0 0 79px 0
+        .catalog-cards-navigation
+            margin-top: 40px
+        .yousee__slider
+            &__inner
+                margin: -15px -10px
+                &__item.big
+                    width: 33.33%
+                    padding: 15px 10px
+                    .yousee__slider__item
+                        &-img
+                            padding: 16px 0
+                            img
+                                height: 190px
+                        &-text
+                            &-price
+                                margin-top: 15px
+                &__item
+                    width: 33.33%
+                    padding: 15px 10px
+            &__item
+                &-img
+                    padding: 16px 0
+    .howToBuy
+        padding: 21px 0 59px 0
+        &__wrapper
+            margin: 10px -10px 0 -10px
+        &__title
+            margin-bottom: 30px
+        &__img
+            padding: 0 10px
+            &__wrapper
+                width: 227px
+                height: 200px
+                img
+                    width: 120px
+                    height: 120px
+        &__text
+            padding: 0 10px
+            &__title
+                font-size: 18px
+                line-height: 21px
+            &__descr
+                font-size: 16px
+                line-height: 140%
+    .aboutCompany
+        padding: 20px 0 48px 0
+        &__wrapper
+            display: flex
+            align-items: start
+            margin: 0 -10px 15px -10px
+        &__title
+            font-size: 28px
+            line-height: 32px
+            margin-bottom: 30px
+        &__text
+            padding: 0 10px
+            p
+                font-size: 16px
+                line-height: 139%
+                &:first-child
+                    margin-top: 0
+        &__img
+            padding: 0 10px
+            img
+                width: 227px
+                height: 227px
+
+    .onlytablevisible
+        font-weight: 400
+        font-size: 16px
+        line-height: 137%
+        color: #818181
+        display: block
+        margin-bottom: 30px
+    .pHidden
+        display: none
+    .brandsBlock
+        padding: 22.5px 0 34px 0
+    .brandsBlockText
+        padding: 0 0 78px 0
+        &__text
+            p
+                margin-top: 13px
+    .directory__way
+        span
+            margin: 0 3.5px
+    .confidentiality
+        padding: 20px 0 80px 0
+        &__title
+            margin-bottom: 29px
+        &__subtitle
+            margin-top: 26px
+        &__list
+            p
+                line-height: 137%
+    .main__title
+        padding: 20px 0 0 0
+
+    .search-resault
+        .catalog-cards-block
+            margin: -10px
+            margin-top: 3px
+        .item__catalog__content-block-filters-sort
+            width: 100%
+            padding: 26px 0 0 0
+        .catalog-cards-block-item
+            padding: 9.5px 10px
+            &:nth-child(7),
+            &:nth-child(8)
+                display: none
+                
+        .catalog-cards-block-item-img
+            padding: 24px 0
+        .catalog-cards-navigation
+            margin-top: 40px
+        &__text
+            padding: 40px 0 79px 0
+            .myworks__text__subdescr
+                line-height: 138%
+        &-not-found
+            padding: 60px 0 250px 0
+    .search-page
+        padding: 15px 1px 20px 1px
+    .product-card-container
+        overflow: inherit
+    .mobile__menu__more.active
+        left: 0
+        transition: .5s all
+    .mobile__menu__more
+        display: block
+        z-index: 11
+        position: absolute
+        top: 53px
+        left: -515px
+        background-color: #fff
+        padding: 20px 24px
+        width: 320px
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0143771), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0119221), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.01), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.00807786), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.00562291)
+        transition: .5s all
+        &__wrapper.active
+            width: 100%
+            transition: .3s all
+        &__wrapper  
+            position: absolute
+            height: 100vh
+            width: 0
+            background-color: rgba(0,0,0,0)
+            display: block
+            top: 0
+            left: 0
+            z-index: 10
+            overflow: hidden
+            transition: .3s all
+        &__list
+            list-style: none
+        &__item
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+        &__link
+            font-weight: 300
+            font-size: 16px
+            line-height: 18px
+            color: #1A1A1A
+            text-decoration-color: transparent
+            transition: .3s all
+            &:hover
+                text-decoration-color: #1A1A1A
+                transition: .3s all
+    .close__mobile__menu__more
+        display: flex
+        align-items: center
+        justify-content: start
+        margin-bottom: 22px
+        cursor: pointer
+        &:hover
+            svg
+                transform: translateX(-5px)
+                transition: .3s all
+        svg
+            margin-right: 10px
+            transition: .3s all
+        &__text
+            font-weight: 400
+            font-size: 16px
+            line-height: 18px
+            color: #1A1A1A
