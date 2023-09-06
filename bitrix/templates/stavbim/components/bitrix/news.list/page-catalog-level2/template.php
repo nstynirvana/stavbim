@@ -46,7 +46,7 @@ $this->setFrameMode(true);
                     $res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
                     if ($ar_res = $res->GetNext())
                     ?>
-                        <div class="catalog-cards-block-item-text-title"><?= $ar_res['NAME'] ?></div>
+                    <div class="catalog-cards-block-item-text-title"><?= $ar_res['NAME'] ?></div>
                     <div class="catalog-cards-block-item-text-descr"><?= $arItem["NAME"] ?></div>
                     <div class="catalog-cards-block-item-text-price"><?= $arItem["PROPERTIES"]["PRICE"]["VALUE"] ?></div>
                 </a>

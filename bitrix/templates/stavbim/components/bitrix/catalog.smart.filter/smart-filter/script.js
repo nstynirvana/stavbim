@@ -157,8 +157,8 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
 					dataType: "html", //Тип данных
 					data: '',
 					success: function (response) { //Если все нормально
-						var resultElements = $(response).find(".block__sort").get(0);
-						$(".block__sort").replaceWith(resultElements);
+						var resultElements = $(response).find(".catalog-cards-block").get(0);
+						$(".catalog-cards-block").replaceWith(resultElements);
 						history.pushState('', '', BX.util.htmlspecialcharsback(result.FILTER_URL))
 					},
 					error: function (response) {

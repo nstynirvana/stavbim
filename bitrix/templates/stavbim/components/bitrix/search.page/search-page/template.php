@@ -78,66 +78,67 @@
 
         <? elseif (count($arResult["SEARCH"]) > 0): ?>
 
-        <?
-        if (isset($_REQUEST['sortField'])) {
-            $_SESSION["SORT"]["FIELD"] = $_REQUEST['sortField'];
-        } else {
-            if ($_SESSION["SORT"]["FIELD"] == "") {
-                $_SESSION["SORT"]["FIELD"] = 'sort';
+            <?
+            if (isset($_REQUEST['sortField'])) {
+                $_SESSION["SORT"]["FIELD"] = $_REQUEST['sortField'];
+            } else {
+                if ($_SESSION["SORT"]["FIELD"] == "") {
+                    $_SESSION["SORT"]["FIELD"] = 'sort';
+                }
             }
-        }
 
-        if (isset($_REQUEST['sortOrder'])) {
-            $_SESSION["SORT"]["ORDER"] = $_REQUEST['sortOrder'];
-        } else {
-            if ($_SESSION["SORT"]["ORDER"] == "") {
-                $_SESSION["SORT"]["ORDER"] = 'asc';
+            if (isset($_REQUEST['sortOrder'])) {
+                $_SESSION["SORT"]["ORDER"] = $_REQUEST['sortOrder'];
+            } else {
+                if ($_SESSION["SORT"]["ORDER"] == "") {
+                    $_SESSION["SORT"]["ORDER"] = 'asc';
+                }
             }
-        }
-        ?>
+            ?>
 
-        <div class="item__catalog__content-block-filters-sort">
-            <div class="catalog-cards__sort-panel">
-                <div class="catalog-cards__sort-panel__title">Сортировать по:</div>
-                <div class="catalog-cards__sort-panel__price catalog-cards__sort-panel__filter <? if ($_SESSION["SORT"]["ORDER"] == "asc" && $_SESSION["SORT"]["FIELD"] == "property_PRICE"): ?> active <? endif; ?>">
-                    <a data-sortfield="property_PRICE"
-                       data-sortorder="<? if ($_SESSION["SORT"]["ORDER"] == "asc"): ?>desc<? else: ?>asc<? endif; ?>"
-                       rel="nofollow"
-                       href="#">цене</a>
-                    <img src="/design/icons/arrow_upp.svg" alt="">
-                </div>
-                <div class="catalog-cards__sort-panel__popular catalog-cards__sort-panel__filter <? if ($_SESSION["SORT"]["ORDER"] == "asc" && $_SESSION["SORT"]["FIELD"] == "shows"): ?> active <? endif; ?>">
-                    <a data-sortfield="shows"
-                       data-sortorder="<? if ($_SESSION["SORT"]["ORDER"] == "asc"): ?>desc<? else: ?>asc<? endif; ?>"
-                       rel="nofollow"
-                       href="#">популярности</a>
-                    <img src="/design/icons/arrow_upp.svg" alt="">
+            <div class="item__catalog__content-block-filters-sort">
+                <div class="catalog-cards__sort-panel">
+                    <div class="catalog-cards__sort-panel__title">Сортировать по:</div>
+                    <div class="catalog-cards__sort-panel__price catalog-cards__sort-panel__filter <? if ($_SESSION["SORT"]["ORDER"] == "asc" && $_SESSION["SORT"]["FIELD"] == "property_PRICE"): ?> active <? endif; ?>">
+                        <a data-sortfield="property_PRICE"
+                           data-sortorder="<? if ($_SESSION["SORT"]["ORDER"] == "asc"): ?>desc<? else: ?>asc<? endif; ?>"
+                           rel="nofollow"
+                           href="#">цене</a>
+                        <img src="/design/icons/arrow_upp.svg" alt="">
+                    </div>
+                    <div class="catalog-cards__sort-panel__popular catalog-cards__sort-panel__filter <? if ($_SESSION["SORT"]["ORDER"] == "asc" && $_SESSION["SORT"]["FIELD"] == "shows"): ?> active <? endif; ?>">
+                        <a data-sortfield="shows"
+                           data-sortorder="<? if ($_SESSION["SORT"]["ORDER"] == "asc"): ?>desc<? else: ?>asc<? endif; ?>"
+                           rel="nofollow"
+                           href="#">популярности</a>
+                        <img src="/design/icons/arrow_upp.svg" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
 
 
-    <? if ($arParams["DISPLAY_BOTTOM_PAGER"] == "Y"): ?>
-        <div class="catalog-cards-navigation">
+            <? if ($arParams["DISPLAY_BOTTOM_PAGER"] == "Y"): ?>
+                <div class="catalog-cards-navigation">
 
-            <?= $arResult['NAV_STRING'] ?>
+                    <?= $arResult['NAV_STRING'] ?>
 
-            <? if ($page < $totalPages) { ?>
-                <div class="catalog-cards-links">
-                    <a href="" class="btn btn-secondary btn-blue ix-show-more-btn"
-                       data-url="<?= $APPLICATION->GetCurPageParam($pageN . '=' . ($page + 1), [$pageN, 'clear_cache']) ?>"></a>
+                    <? if ($page < $totalPages) { ?>
+                        <div class="catalog-cards-links">
+                            <a href="" class="btn btn-secondary btn-blue ix-show-more-btn"
+                               data-url="<?= $APPLICATION->GetCurPageParam($pageN . '=' . ($page + 1), [$pageN, 'clear_cache']) ?>"></a>
+                        </div>
+                    <? } ?>
                 </div>
-            <? } ?>
-        </div>
-    <? endif; ?>
+            <? endif; ?>
 
 
-    <? else: ?>
+        <? else: ?>
 
-        <div class="nothingToFind">
-            <p>По вашему запросу ничего не найдено</p>
-        </div>
+            <div class="nothingToFind">
+                <p>По вашему запросу ничего не найдено</p>
+            </div>
 
-    <? endif; ?>
+        <? endif; ?>
 
+    </div>
 </section>

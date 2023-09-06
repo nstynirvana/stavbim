@@ -10,6 +10,9 @@
 .slick-dots>li:only-child {
   display: none;
 }
+/*.slick-prev, .slick-arrow, .slick-disabled {*/
+/*  color: red;*/
+/*}*/
 
 .product-card__slider__item {
   height: 449px;
@@ -1553,6 +1556,7 @@
 .catalog-cards__sort-panel {
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 .catalog-cards__sort-panel__title {
   margin-right: 20px;
@@ -4300,8 +4304,8 @@
   .myworks__block__slider__inner__item.big .myworks__block__slider__item-img {
     border: 1px solid #EFEFEF;
     border-radius: 2px;
-    padding: 39px 137px;
-    height: 60%;
+    padding: 48px 15px;
+    /*height: 60%;*/
   }
   .myworks__block__slider__inner__item.big .myworks__block__slider__item-img-main {
     width: 100%;
@@ -4556,6 +4560,7 @@
     height: 350px;
   }
   .search-resault .item__catalog__content-block-filters-sort {
+    width: 100%;
     padding: 26px 0 0 0;
   }
   .search-resault .catalog-cards-block-item-img {
@@ -4656,7 +4661,7 @@
 @media only screen and (max-width: 1033px) {
   .container {
     width: 95.874%;
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
   #hide,
   #hideCard {
@@ -5660,11 +5665,9 @@
     margin-top: 15px;
   }
 
-  /*.myworks__block__slider__inner__item.big {*/
-  /*  display: none;*/
-  /*}*/
-  .big {
-    display: none;
+  .myworks__block__slider__inner__item.big {
+    padding: 13px 10px;
+    width: 33.33%;
   }
 
   .myworks__block__slider__inner {
@@ -6539,22 +6542,22 @@
   }
   .footer__list {
     margin-top: 13px;
-    display: none;
-  }
-  .footer__list__mobile {
+    /*display: none;*/
     display: flex;
     flex-wrap: wrap;
     width: 290px;
     padding: 0;
-    margin: 13px 23px 0;
+    /*margin: 13px 23px 0;*/
   }
-  .footer__list__wrapper {]
+  .footer__list__mobile {
+
+  }
+  .footer__list__wrapper {
     margin: 0;
   }
   .footer__item {
     width: 44%;
-    margin: 0 7.5px;
-    margin-top: 8px;
+    margin: 8px 15px 0 0;
   }
   .footer__item a {
     font-size: 12px;
@@ -6841,7 +6844,7 @@
     padding: 10px 0;
   }
   .item__catalog-cards-block-item:nth-child(2n+1) {
-    display: none;
+    /*display: none;*/
   }
   .item__catalog__content-block {
     padding: 0 0 80px 0;
@@ -7079,7 +7082,8 @@
   }
 
   .myworks__block__slider__inner__item.big {
-    display: none;
+    padding: 15px 0;
+    width: 100%;
   }
 
   .myworks__block {

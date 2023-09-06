@@ -64,8 +64,10 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                         }
                         ?>
                         <div class="<? if ($arParams["FILTER_VIEW_MODE"] == "HORIZONTAL"):?>col-sm-6 col-md-4<? else:?>col-lg-12<?endif ?> bx-filter-parameters-box bx-active">
-                            <span class="bx-filter-container-modef"></span>
-                            <div class="bx-filter-parameters-box-title" onclick="smartFilter.hideFilterProps(this)">
+                           <?/* <span class="bx-filter-container-modef"></span>
+                            <div class="bx-filter-parameters-box-title"
+                                 onclick="smartFilter.hideFilterProps(this)"
+                            >
                                 <span><?= $arItem["NAME"] ?>
                                 <i data-role="prop_angle"class="fa fa-angle-<? if ($arItem["DISPLAY_EXPANDED"] == "Y"):?>up<? else:?>down<?endif ?>"></i></span>
                             </div>
@@ -124,6 +126,7 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                                     </div>
                                 </div>
                             </div>
+                        */?>
                         </div>
                     <?
                     $arJsParams = array(
@@ -171,8 +174,8 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                         <?/*dp($arItem);*/ ?>
                         <span class="bx-filter-container-modef"></span>
 
-                        <div class="item__catalog__filter-block__smart__title item__catalog-accord-title active"
-                             onclick="smartFilter.hideFilterProps(this)">
+                        <div class="item__catalog__filter-block__smart__title item__catalog-accord-title active">
+<!--                             onclick="smartFilter.hideFilterProps(this)">-->
                             <p style="margin: 0;"><?= $arItem["NAME"] ?>
                                 <? if ($arItem["FILTER_HINT"] <> ""):?>
                                     <i id="item_title_hint_<? echo $arItem["ID"] ?>" class="fa fa-question-circle"></i>

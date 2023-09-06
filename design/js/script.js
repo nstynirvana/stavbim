@@ -328,6 +328,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // catalog grade 2
 
+    // $('body').on('click', ".item__catalog__content-block-mobile-filter-main__accept", function () {
+
     function openCatalogGraade2Content(content) {
         content.style.height = `${content.scrollHeight}px`;
     }
@@ -340,8 +342,9 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
         catalogGrade2AccordContent.forEach(item => openCatalogGraade2Content(item));
         closeCatalogGraade2Content(catalogGrade2MobileContent);
-
+        console.log(catalogGrade2MobileBtn);
         catalogGrade2MobileBtn.addEventListener('click', () => {
+
             catalogGrade2MobileBtn.classList.toggle('active')
             if (catalogGrade2MobileBtn.classList.contains('active')) {
                 openCatalogGraade2Content(catalogGrade2MobileContent);
@@ -363,6 +366,10 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+
+    // });
+
 
 
     let dinamicHeight;
