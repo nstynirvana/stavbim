@@ -152,8 +152,7 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
             hrefFILTER = BX.findChildren(modef, {tag: 'A'}, true);
 
 
-            // $('body').on('click', ".item__catalog__content-block-mobile-filter-main__accept", function () {
-
+            // $(document).find('.item__catalog__content-block-mobile-filter-main__accept').on('click', function () {
                 $.ajax({
                     url: BX.util.htmlspecialcharsback(result.FILTER_URL),
                     type: 'GET', //Тип запроса
@@ -163,13 +162,50 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
                         var resultElements = $(response).find(".block__sort").get(0);
                         $(".block__sort").replaceWith(resultElements);
                         history.pushState('', '', BX.util.htmlspecialcharsback(result.FILTER_URL))
+                        executeScript();
                     },
                     error: function (response) {
                         console.log("Ошибка при отправке формы");
                     }
                 });
-
             // });
+
+            function executeScript() {
+                    function openCatalogGraade2Content(content) {
+                        content.style.height = `${content.scrollHeight}px`;
+                    }
+                    function closeCatalogGraade2Content(content) {
+                        content.style.height = 0;
+                    }
+                    const catalogGrade2AccordBtn = document.querySelectorAll('.item__catalog-accord-title'),
+                        catalogGrade2MobileBtn = document.querySelector('.item__catalog__content-block-mobile-filter-main-btn'),
+                        catalogGrade2MobileContent = document.querySelector('.item__catalog__content-block-mobile-filter-main-content'),
+                        catalogGrade2AccordContent = document.querySelectorAll('.item__catalog-accord-descr');
+                    catalogGrade2AccordContent.forEach(item => openCatalogGraade2Content(item));
+                    closeCatalogGraade2Content(catalogGrade2MobileContent);
+                    catalogGrade2MobileBtn.addEventListener('click', () => {
+
+                        catalogGrade2MobileBtn.classList.toggle('active')
+                        if (catalogGrade2MobileBtn.classList.contains('active')) {
+                            openCatalogGraade2Content(catalogGrade2MobileContent);
+                        } else {
+                            closeCatalogGraade2Content(catalogGrade2MobileContent);
+                        }
+                    });
+
+                    catalogGrade2AccordBtn.forEach(function(item, index) {
+                        item.addEventListener('click', function(e) {
+                            item.classList.toggle('active');
+                            catalogGrade2AccordContent[index].classList.toggle('active');
+                            if (item.classList.contains('active')) {
+                                openCatalogGraade2Content(catalogGrade2AccordContent[index]);
+                            } else {
+                                closeCatalogGraade2Content(catalogGrade2AccordContent[index]);
+                            }
+                            catalogGrade2MobileContent.style.height = catalogGrade2MobileContent.maxheight = '901px';
+                        });
+                    });
+            }
 
 
             if (result.FILTER_URL && hrefFILTER) {

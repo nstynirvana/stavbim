@@ -27,5 +27,5 @@ $this->setFrameMode(true);?>
     <?else:?>
         <input placeholder="Поиск" type="search" id="search" name="q" maxlength="50" class="search-panel__input">
     <?endif;?>
-    <button class="search-panel__btn" >Найти</button>
+    <button class="search-panel__btn">Найти</button>
 </form>

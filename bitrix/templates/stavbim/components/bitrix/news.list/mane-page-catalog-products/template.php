@@ -60,7 +60,7 @@ $this->setFrameMode(true);
                         <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
                         <img src="<?=$arFile_2["SRC"]?>" class="works__icon" alt="">
                         <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-modal">Модель для проектирования</a>
-                        <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-descr"><?=$arItem["PREVIEW_TEXT"]?></a>
+                        <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-descr"><?=$arItem["NAME"]?></a>
                         <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-price"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></a>
                         <button class="works__card-addToBasket">Добавить модель в корзину</button>
                 </div>
@@ -71,14 +71,14 @@ $this->setFrameMode(true);
             <? foreach ($arResult["ITEMS"] as $arItem): ?>
                 <div class="works__slide">
                     <div class="works__card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-                        <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__img-container">
+                        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="works__img-container">
                             <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
                             <?$arFile_2 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_FILE"]["VALUE"]);?>
                             <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
                             <img src="<?=$arFile_2["SRC"]?>" class="works__icon" alt="">
                             <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-modal">Модель для проектирования</a>
-                            <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-descr"><?=$arItem["PREVIEW_TEXT"]?></a>
-                            <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-price"><?=$arFile_3["VALUE"]?></a>
+                            <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-descr"><?=$arItem["NAME"]?></a>
+                            <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="works__card-price"><?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?></a>
                             <button class="works__card-addToBasket">Добавить модель в корзину</button>
                     </div>
                 </div>
