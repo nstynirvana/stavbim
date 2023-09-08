@@ -304,6 +304,7 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 	false
 );?>
 
+<?$arrFilterBrands = array("PROPERTY_SHOW_MAIN_VALUE" => "Y");?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-catalog-brands", 
@@ -332,9 +333,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 			0 => "",
 			1 => "",
 		),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilterBrands",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "3",
+		"IBLOCK_ID" => "6",
 		"IBLOCK_TYPE" => "catalog",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
@@ -347,13 +348,12 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "2",
-		"PARENT_SECTION_CODE" => "katalog-brendov",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "PICTURE_BRAND",
-			2 => "",
+			0 => "SHOW_MAIN",
+			1 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
@@ -362,10 +362,10 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
-		"SORT_BY1" => "ACTIVE_FROM",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
+		"SORT_BY1" => "SORT",
+		"SORT_BY2" => "ACTIVE_FROM",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "DESC",
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
