@@ -5,8 +5,8 @@
 <?$APPLICATION->ShowHead();?>
 <title><?$APPLICATION->ShowTitle()?></title>
 
-<link type="image/x-icon" href="favicon.svg" rel="shortcut icon">
-<link type="Image/x-icon" href="favicon.svg" rel="icon">
+<link type="image/x-icon" href="/favicon.svg" rel="shortcut icon">
+<link type="Image/x-icon" href="/favicon.svg" rel="icon">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
