@@ -170,9 +170,7 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 	false
 );?>
 
-
-
-<?$APPLICATION->IncludeComponent(
+<?/*$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-catalog", 
 	array(
@@ -236,9 +234,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?>
+);*/?>
 
-<?/*$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-banner-list", 
 	array(
@@ -304,7 +302,7 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);*/?>
+);?>
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
