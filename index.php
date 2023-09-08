@@ -66,7 +66,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"text-block-page-container-about", 
 	array(
@@ -130,7 +132,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?>&nbsp;<?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-catalog", 
 	array(
@@ -194,7 +198,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-banner-list", 
 	array(
@@ -260,7 +266,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-catalog-brands", 
 	array(
@@ -325,7 +333,9 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <?$APPLICATION->IncludeComponent(
+);?>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	"mane-page-catalog-products", 
 	array(
@@ -392,4 +402,6 @@ $APPLICATION->SetTitle("StavBim - продажа семейств для про�
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <br><? require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
+);?>
+
+<? require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
