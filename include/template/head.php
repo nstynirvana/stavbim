@@ -4,7 +4,6 @@
 
 <?$APPLICATION->ShowHead();?>
 <title><?$APPLICATION->ShowTitle()?></title>
-<title>stavbim.</title>
 
 <link type="image/x-icon" href="favicon.svg" rel="shortcut icon">
 <link type="Image/x-icon" href="favicon.svg" rel="icon">
@@ -12,7 +11,3 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 <link rel="stylesheet" href="/design/css/style.css">
-
-<!-- <style>*,*::before,*::after {outline: 1px solid red}</style>-->
-<!DOCTYPE html>
-<html lang="ru">
