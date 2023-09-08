@@ -204,7 +204,6 @@ endif;
         </div>
     </section>
 
-
 <? else: ?>
 
     <div class="container product-container">
@@ -261,7 +260,6 @@ endif;
                                 ),
                                 false
                             ); ?>
-
                         </div>
 
                         <? $APPLICATION->IncludeComponent(

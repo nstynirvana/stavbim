@@ -253,14 +253,20 @@ window.addEventListener('DOMContentLoaded', () => {
 
         $("main.content").addClass("active");
 
+        console.log("Это я сортирую тут все");
+
+
         sendQueryAction(stringToSend, "/my-works/", "sortChange", "POST");
 
         return false;
     });
 
     function sendQueryAction(strToSend, URL, action, method) {
+
+        console.log("Нет я");
+
         $.ajax({
-            url: "", //Адрес подгружаемой страницы
+            url: location.href, //Адрес подгружаемой страницы
             type: method, //Тип запроса
             dataType: "html", //Тип данных
             data: strToSend,
@@ -268,7 +274,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 var resultElements = $(response).find(".block__sort").get(0);
 
-                console.log(resultElements);
+
+                console.log("а может и я");
 
 
                 $(".block__sort").replaceWith(resultElements);
@@ -337,6 +344,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (catalogGrade2MobileContent == null || catalogGrade2AccordContent == null) {
     } else {
+
         catalogGrade2AccordContent.forEach(item => openCatalogGraade2Content(item));
         closeCatalogGraade2Content(catalogGrade2MobileContent);
 

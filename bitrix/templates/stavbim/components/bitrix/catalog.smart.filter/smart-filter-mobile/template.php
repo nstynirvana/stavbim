@@ -323,16 +323,14 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                                 ?>
                                 <? foreach ($arItem["VALUES"] as $val => $ar): ?>
 
-                                    <label data-role="label_<?= $ar["CONTROL_ID"] ?>"
-                                           class="checkcontainer bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled' : '' ?>"
-                                           for="<? echo $ar["CONTROL_ID"] ?>">
+                                    <label data-role="label_<?= $ar["CONTROL_ID"] ?>" class="checkcontainer bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled' : '' ?>">
                                         <input
-                                                type="checkbox"
-                                                value="<? echo $ar["HTML_VALUE"] ?>"
-                                                name="<? echo $ar["CONTROL_NAME"] ?>"
-                                                id="<? echo $ar["CONTROL_ID"] ?>"
+                                            type="checkbox"
+                                            value="<? echo $ar["HTML_VALUE"] ?>"
+                                            name="<? echo $ar["CONTROL_NAME"] ?>"
+                                            id=""
                                             <? echo $ar["CHECKED"] ? 'checked="checked"' : '' ?>
-                                                onclick="smartFilter.click(this)"
+                                            onclick="setMainFilterItem('<?=$ar["CONTROL_ID"]?>');"
                                         />
                                         <div class="checkmark"></div>
                                         <div class="name bx-filter-param-text"

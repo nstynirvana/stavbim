@@ -148,23 +148,38 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
 		}
 
 		if (!!modef && !!modef_num) {
+
+			console.log("Я споткнулся не тут");
+
 			modef_num.innerHTML = result.ELEMENT_COUNT;
 			hrefFILTER = BX.findChildren(modef, {tag: 'A'}, true);
 
 			$.ajax({
-					url: BX.util.htmlspecialcharsback(result.FILTER_URL),
-					type: 'GET', //Тип запроса
-					dataType: "html", //Тип данных
-					data: '',
-					success: function (response) { //Если все нормально
-						var resultElements = $(response).find(".catalog-cards-block").get(0);
-						$(".catalog-cards-block").replaceWith(resultElements);
-						history.pushState('', '', BX.util.htmlspecialcharsback(result.FILTER_URL))
-					},
-					error: function (response) {
-						console.log("Ошибка при отправке формы");
-					}
-				});
+				url: BX.util.htmlspecialcharsback(result.FILTER_URL),
+				type: 'GET', //Тип запроса
+				dataType: "html", //Тип данных
+				data: '',
+				success: function (response) { //Если все нормально
+
+					console.log("Я даже дошел сюда");
+
+					var resultElements = $(response).find(".catalog-cards-block-container-with-nav").get(0);
+					var resultMobileTags = $(response).find(".item__catalog__content-block-filters-show-items-mobile").get(0);
+					var resultDesktopTags = $(response).find(".item__catalog__content-block-filters-show").get(0);
+					var sortDesktopField = $(response).find(".item__catalog__content-block-filters-sort").get(0);
+
+					$(".item__catalog__content-block-filters-show-items-mobile").replaceWith(resultMobileTags);
+					$(".catalog-cards-block-container-with-nav").replaceWith(resultElements);
+					$(".item__catalog__content-block-filters-show").replaceWith(resultDesktopTags);
+					$(".item__catalog__content-block-filters-sort").replaceWith(sortDesktopField);
+
+					history.pushState('', '', BX.util.htmlspecialcharsback(result.FILTER_URL));
+
+				},
+				error: function (response) {
+					console.log("Ошибка при отправке формы");
+				}
+			});
 
 			if (result.FILTER_URL && hrefFILTER) {
 				hrefFILTER[0].href = BX.util.htmlspecialcharsback(result.FILTER_URL);

@@ -334,7 +334,7 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                                                 value="<? echo $ar["HTML_VALUE"] ?>"
                                                 name="<? echo $ar["CONTROL_NAME"] ?>"
                                                 id="<? echo $ar["CONTROL_ID"] ?>"
-                                            <? echo $ar["CHECKED"] ? 'checked="checked"' : '' ?>
+                                                <? echo $ar["CHECKED"] ? 'checked="checked"' : '' ?>
                                                 onclick="smartFilter.click(this)"
                                         />
                                         <?/*dp($ar["CONTROL_ID"])*/?>

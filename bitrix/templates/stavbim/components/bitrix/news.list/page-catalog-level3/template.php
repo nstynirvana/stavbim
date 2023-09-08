@@ -13,41 +13,44 @@
 $this->setFrameMode(true);
 ?>
 
-        <div class="catalog-cards-block">
+<div class="catalog-cards-block-container-with-nav">
 
-            <? foreach ($arResult['ITEMS'] as $arItem): ?>
+<div class="catalog-cards-block">
 
-                <?
-                $arProps = $arItem['PROPERTIES'];
+    <? foreach ($arResult['ITEMS'] as $arItem): ?>
 
-                $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
-                $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
-                ?>
+        <?
+        $arProps = $arItem['PROPERTIES'];
 
-                <div class="item__catalog-cards-block-item">
+        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+        ?>
 
-                    <div class="catalog-cards-block-item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-                        <? /*dp($arItem)*/?>
-                        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
-                            <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
-                            <img src="<?= $arFile["SRC"] ?>" alt="">
-                        </a>
-                        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-text">
-                            <?
-                            $res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
-                            if ($ar_res = $res->GetNext())
-                            ?>
-                            <div class="catalog-cards-block-item-text-title"><?= $ar_res['NAME'] ?></div>
-                            <div class="catalog-cards-block-item-text-descr"><?= $arItem["NAME"]  ?></div>
-                            <div class="catalog-cards-block-item-text-price"><?= $arItem["PROPERTIES"]["PRICE"]["VALUE"] ?></div>
-                        </a>
-                        <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
-                    </div>
-                </div>
-            <? endforeach; ?>
+        <div class="item__catalog-cards-block-item">
+
+            <div class="catalog-cards-block-item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <? /*dp($arItem)*/?>
+                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
+                    <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
+                    <img src="<?= $arFile["SRC"] ?>" alt="">
+                </a>
+                <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-text">
+                    <?
+                    $res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
+                    if ($ar_res = $res->GetNext())
+                    ?>
+                    <div class="catalog-cards-block-item-text-title"><?= $ar_res['NAME'] ?></div>
+                    <div class="catalog-cards-block-item-text-descr"><?= $arItem["NAME"]  ?></div>
+                    <div class="catalog-cards-block-item-text-price"><?= $arItem["PROPERTIES"]["PRICE"]["VALUE"] ?></div>
+                </a>
+                <button class="catalog-cards-block-item-text-btn">Добавить в корзину</button>
+            </div>
         </div>
-
+    <? endforeach; ?>
+</div>
 
 <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-    <br/><?= $arResult["NAV_STRING"] ?>
+    <?= $arResult["NAV_STRING"] ?>
 <? endif; ?>
+
+</div>
