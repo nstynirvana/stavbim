@@ -253,7 +253,7 @@
     <div class="basket__pay__btn__block">
         <button class="basket__pay__btn">Купить</button>
     </div>
-    <div class="basket__copyright"><p>Нажимая кнопку «Купить» вы соглашаетесь с <a href="/confidentiality.html">политикой конфиденциальности</a></p></div>
+    <div class="basket__copyright"><p>Нажимая кнопку «Купить» вы соглашаетесь с <a href="/confidentiality/">политикой конфиденциальности</a></p></div>
 </div>
 
 <!-- КОРЗИНА -->
