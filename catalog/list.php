@@ -20,6 +20,15 @@ while ($ar_result = $db_list->GetNext()) {
 
 }
 
+//ОПРЕДЕЛЯЕМ НАЗАД ЭТО КУДА
+$backLink = "";
+$explodePath = explode("/", $arrCurrentSectionInfo["SECTION_PAGE_URL"]);
+$lastElement = array_pop($explodePath);
+$lastElement = array_pop($explodePath);
+$backLink = implode("/", $explodePath)."/";
+//ОПРЕДЕЛЯЕМ НАЗАД ЭТО КУДА
+
+
 if ($_REQUEST["PROPARENT_SECTION_CODE"] != ""):
     $sectionCode = $_REQUEST["PROPARENT_SECTION_CODE"];
 elseif ($_REQUEST["PARENT_SECTION_CODE"] != ""):
@@ -30,24 +39,12 @@ endif;
 
 ?>
 
-    <div class="container">
-        <? $APPLICATION->IncludeComponent(
-            "bitrix:breadcrumb",
-            "breadcrumbs",
-            array(
-                "COMPONENT_TEMPLATE" => "breadcrumbs",
-                "START_FROM" => "0",
-                "PATH" => "",
-                "SITE_ID" => "s1",
-            ),
-            false
-        ); ?>
-    </div>
+<? include($_SERVER['DOCUMENT_ROOT'] . "/include/template/breadcrumbs.php"); ?>
 
 <? if (is_array($arrChilds) && count($arrChilds) > 0): ?>
 
     <div class="container product-container">
-        <a href="<?= $arrCurrentSectionInfo["LIST_PAGE_URL"] ?>" class="back-to-page">
+        <a href="<?=$backLink?>" class="back-to-page">
             <svg class="back-to-page-img" width="17" height="14" viewBox="0 0 17 14" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 7H1M1 7L7 1M1 7L7 13" stroke="currentColor"/>
@@ -211,7 +208,7 @@ endif;
 <? else: ?>
 
     <div class="container product-container">
-        <a href="<?= $arrCurrentSectionInfo["LIST_PAGE_URL"] ?>" class="back-to-page">
+        <a href="<?=$backLink?>" class="back-to-page">
             <svg class="back-to-page-img" width="17" height="14" viewBox="0 0 17 14" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 7H1M1 7L7 1M1 7L7 13" stroke="currentColor"/>
