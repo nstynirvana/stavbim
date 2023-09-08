@@ -31,8 +31,7 @@ for($index = 0; $index < $itemSize; $index++)
 	{
 		$strReturn .= '
 			<div class="directory__way" id="bx_breadcrumb_'.$index.'" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-				<a class="directory__way-link" href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item"><span itemprop="name">'.$title.'</span>
-				</a>
+				<a class="directory__way-link" href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item">'.$title.'</a>
 				<meta itemprop="position" content="'.($index + 1).'"/>
 				<span>/</span>
 			</div>';

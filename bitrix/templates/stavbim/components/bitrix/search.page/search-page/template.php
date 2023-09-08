@@ -103,14 +103,16 @@
                         <a data-sortfield="property_PRICE"
                            data-sortorder="<? if ($_SESSION["SORT"]["ORDER"] == "asc"): ?>desc<? else: ?>asc<? endif; ?>"
                            rel="nofollow"
-                           href="#">цене</a>
+                           href="#">цене
+                        </a>
                         <img src="/design/icons/arrow_upp.svg" alt="">
                     </div>
                     <div class="catalog-cards__sort-panel__popular catalog-cards__sort-panel__filter <? if ($_SESSION["SORT"]["ORDER"] == "asc" && $_SESSION["SORT"]["FIELD"] == "shows"): ?> active <? endif; ?>">
                         <a data-sortfield="shows"
                            data-sortorder="<? if ($_SESSION["SORT"]["ORDER"] == "asc"): ?>desc<? else: ?>asc<? endif; ?>"
                            rel="nofollow"
-                           href="#">популярности</a>
+                           href="#">популярности
+                        </a>
                         <img src="/design/icons/arrow_upp.svg" alt="">
                     </div>
                 </div>
@@ -134,9 +136,12 @@
 
         <? else: ?>
 
-            <div class="nothingToFind">
-                <p>По вашему запросу ничего не найдено</p>
-            </div>
+            <section class="search-resault-not-found">
+                <div class="container">
+                    <h1 class="search-resault-not-found__title">По вашему запросу ничего не найдено</h1>
+                    <a href="/" class="search-resault-not-found__btn">Вернуться на главную</a>
+                </div>
+            </section>
 
         <? endif; ?>
 

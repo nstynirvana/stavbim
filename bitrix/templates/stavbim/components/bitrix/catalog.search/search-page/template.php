@@ -20,19 +20,17 @@ $this->setFrameMode(true);
 global $searchFilter;
 
 $elementOrder = [];
-if ($arParams['USE_SEARCH_RESULT_ORDER'] === 'N')
-{
-	$elementOrder = [
-		"ELEMENT_SORT_FIELD" => $arParams["ELEMENT_SORT_FIELD"],
-		"ELEMENT_SORT_ORDER" => $arParams["ELEMENT_SORT_ORDER"],
-		"ELEMENT_SORT_FIELD2" => $arParams["ELEMENT_SORT_FIELD2"],
-		"ELEMENT_SORT_ORDER2" => $arParams["ELEMENT_SORT_ORDER2"],
-	];
+if ($arParams['USE_SEARCH_RESULT_ORDER'] === 'N') {
+    $elementOrder = [
+        "ELEMENT_SORT_FIELD" => $arParams["ELEMENT_SORT_FIELD"],
+        "ELEMENT_SORT_ORDER" => $arParams["ELEMENT_SORT_ORDER"],
+        "ELEMENT_SORT_FIELD2" => $arParams["ELEMENT_SORT_FIELD2"],
+        "ELEMENT_SORT_ORDER2" => $arParams["ELEMENT_SORT_ORDER2"],
+    ];
 }
 
-if (Loader::includeModule('search'))
-{
-	$arElements = $APPLICATION->IncludeComponent(
+if (Loader::includeModule('search')) {
+    $arElements = $APPLICATION->IncludeComponent(
         "bitrix:search.page",
         "search-page",
         [
@@ -41,11 +39,11 @@ if (Loader::includeModule('search'))
             "USE_LANGUAGE_GUESS" => $arParams["USE_LANGUAGE_GUESS"],
             "CHECK_DATES" => $arParams["CHECK_DATES"],
             "arrFILTER" => [
-                "iblock_".$arParams["IBLOCK_TYPE"],
+                "iblock_" . $arParams["IBLOCK_TYPE"],
             ],
-            "arrFILTER_iblock_".$arParams["IBLOCK_TYPE"] => [
+            "arrFILTER_iblock_" . $arParams["IBLOCK_TYPE"] => [
                 $arParams["IBLOCK_ID"],
-            ]	,
+            ],
             "USE_TITLE_RANK" => $arParams['USE_TITLE_RANK'],
             "DEFAULT_SORT" => "rank",
             "FILTER_NAME" => "",
@@ -66,44 +64,30 @@ if (Loader::includeModule('search'))
     );
 
 
-	if (!empty($arElements) && is_array($arElements))
-	{
-		$searchFilter = [
-			"ID" => $arElements,
-		];
-		if ($arParams['USE_SEARCH_RESULT_ORDER'] === 'Y')
-		{
-			$elementOrder = [
-				"ELEMENT_SORT_FIELD" => "ID",
-				"ELEMENT_SORT_ORDER" => $arElements,
-			];
-		}
-	}
-	else
-	{
-		if (is_array($arElements))
-		{
-			echo GetMessage("CT_BCSE_NOT_FOUND");
-			return;
-		}
-	}
-}
-else
-{
-	$searchQuery = '';
-	if (isset($_REQUEST['q']) && is_string($_REQUEST['q']))
-		$searchQuery = trim($_REQUEST['q']);
-	if ($searchQuery !== '')
-	{
-		$searchFilter = [
-			'*SEARCHABLE_CONTENT' => $searchQuery
-		];
-	}
-	unset($searchQuery);
+    if (!empty($arElements) && is_array($arElements)) {
+        $searchFilter = [
+            "ID" => $arElements,
+        ];
+        if ($arParams['USE_SEARCH_RESULT_ORDER'] === 'Y') {
+            $elementOrder = [
+                "ELEMENT_SORT_FIELD" => "ID",
+                "ELEMENT_SORT_ORDER" => $arElements,
+            ];
+        }
+    }
+} else {
+    $searchQuery = '';
+    if (isset($_REQUEST['q']) && is_string($_REQUEST['q']))
+        $searchQuery = trim($_REQUEST['q']);
+    if ($searchQuery !== '') {
+        $searchFilter = [
+            '*SEARCHABLE_CONTENT' => $searchQuery
+        ];
+    }
+    unset($searchQuery);
 }
 
-if (!empty($searchFilter) && is_array($searchFilter))
-{
+if (!empty($searchFilter) && is_array($searchFilter)) {
 
     $APPLICATION->IncludeComponent(
         "bitrix:news.list",
