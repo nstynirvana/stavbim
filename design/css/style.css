@@ -1094,7 +1094,7 @@
 .footer {
   background-color: #1A1A1A;
   padding: 40px 0;
-  min-height: 448px;
+  /*min-height: 448px;*/
 }
 .footer__wrapper {
   display: -webkit-flex;

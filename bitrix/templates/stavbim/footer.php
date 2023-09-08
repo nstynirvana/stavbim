@@ -48,10 +48,10 @@
             <div class="footer__logo"><img src="/design/img/footer_logo.svg" alt="StavBim"></div>
         </div>
         <div class="footer__moreinfo">
-            <div class="footer__copyright"><a href="/confidentiality/index.php">Политика конфиденциальности</a></div>
-            <div class="footer__date"><p>© 2023 ООО «stavbim»</p></div>
+            <div class="footer__copyright"><a href="/confidentiality/">Политика конфиденциальности</a></div>
+            <div class="footer__date"><p>© <?=date("Y")?> ООО «stavbim»</p></div>
             <div class="footer__prodaction">
-                <a href="https://dapsite.ru/" class="footer__prodaction-content">
+                <a href="https://dapsite.ru/" target="_blank" class="footer__prodaction-content">
                     <p>Создание сайта</p>
                     <svg width="49" height="33" viewBox="0 0 49 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
