@@ -8,9 +8,9 @@
         <?if($counter == 0):?>
             <ul class="header__list">
         <?endif;?>
-        <?if($counter < 6):?>
-            <li class="header__list-item"><a href="<?= $arItem["LINK"] ?>"class="header__link"><?= $arItem["TEXT"] ?></a></li>
-        <?endif;?>
+            <?if($counter < 6):?>
+                <li class="header__list-item"><a href="<?= $arItem["LINK"] ?>"class="header__link"><?= $arItem["TEXT"] ?></a></li>
+            <?endif;?>
         <?if($counter == 6):?>
                 <li class="header__list-item link-more"><a class="header__link">Eщё</a></li>
             </ul>
@@ -20,9 +20,9 @@
                         <ul class="droplist__list">
         <?endif;?>
 
-        <?if($counter >= 6):?>
-            <li class="droplist__item"><a href="<?= $arItem["LINK"] ?>"><?= $arItem["TEXT"] ?></a></li>
-        <?endif;?>
+                        <?if($counter >= 6):?>
+                            <li class="droplist__item"><a href="<?= $arItem["LINK"] ?>"><?= $arItem["TEXT"] ?></a></li>
+                        <?endif;?>
         <?$counter++;?>
         <?if($counter == $countElements):?>
                         </ul>
