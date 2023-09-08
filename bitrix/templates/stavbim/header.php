@@ -9,6 +9,8 @@
 
 <? $APPLICATION->ShowPanel(); ?>
 
+<? include($_SERVER['DOCUMENT_ROOT'] . "/include/template/counters.php"); ?>
+
 <body>
 <header class="header">
     <div class="container">
