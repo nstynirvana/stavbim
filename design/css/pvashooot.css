@@ -56,4 +56,13 @@
         margin-bottom: 20px;
     }
 
+
+
+}
+@media only screen and (max-width: 545px) {
+
+    .howToBuy__img__wrapper{
+        width: 100%;
+    }
+
 }

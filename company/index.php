@@ -3,28 +3,12 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("О компании");
 ?>
 
-<div class="container">
-    <? $APPLICATION->IncludeComponent(
-        "bitrix:breadcrumb",
-        "breadcrumbs",
-        array(
-            "COMPONENT_TEMPLATE" => "breadcrumbs",
-            "START_FROM" => "0",
-            "PATH" => "",
-            "SITE_ID" => "s1"
-        ),
-        false
-    ); ?>
-</div>
-
-
+<? include($_SERVER['DOCUMENT_ROOT'] . "/include/template/breadcrumbs.php"); ?>
 
 <section class="aboutCompany">
     <div class="container">
 
-        <div class="page-title">
-            <h1 class="aboutCompany__title"><?$APPLICATION->ShowTitle(false)?></h1>
-        </div>
+        <? include($_SERVER['DOCUMENT_ROOT'] . "/include/template/page-title.php"); ?>
 
         <div class="pvashoot about-page">
 
