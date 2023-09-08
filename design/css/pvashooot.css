@@ -30,6 +30,26 @@
 .one-text-block-container{
     display: block;
 }
+
+
+.catalog-page-header-custome{
+    padding-top: 24px;
+}
+.catalog-page-header-custome .aboutCompany__title{
+    margin-bottom: 0px;
+}
+.catalog-page-header-custome .main-catalog__cards-block{
+    margin: -10px -15px 0 -15px;
+}
+
+.openable.active .accordion__more-btn::before{
+    transform: rotate(-135deg);
+}
+.openable.active .accordion__more-btn::after{
+    transform: rotate(135deg);
+}
+
+
 @media only screen and (max-width: 1279px) {
 
     .one-text-block p{

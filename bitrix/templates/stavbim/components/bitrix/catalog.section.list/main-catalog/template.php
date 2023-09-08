@@ -1,11 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 ?>
-
 <? foreach ($arResult["SECTIONS"] as $arSection): ?>
-
-    <?//echo "<pre>"; print_r($arSection); echo "</pre>";?>
-
     <section class="main-catalog" id="<?= $this->GetEditAreaId($arSection['ID']); ?>">
         <? if ($arSection["UF_CUSTOME_NAME"] != "") {
             $name = htmlspecialchars_decode($arSection["UF_CUSTOME_NAME"]);
@@ -13,9 +9,7 @@ $this->setFrameMode(true);
             $name = $arSection["NAME"];
         } ?>
         <h2 class="main-catalog__title"><?= $name ?></h2>
-
         <div class="main-catalog__cards-block">
-
             <?
             $arChildFilter = array('IBLOCK_ID' => $arParams["IBLOCK_ID"], 'SECTION_ID' => $arSection["ID"]);
             $arChildSections = CIBlockSection::GetList(Array("SORT"=>"ASC"), $arChildFilter, true);
@@ -32,8 +26,6 @@ $this->setFrameMode(true);
                         </div>
                         <div class="catalog__card-descr"><p><?= $childSection["NAME"] ?></p></div>
                     </a>
-
-
                     <div class="accordion__wrapper openable">
                         <?
                         $counter = 0;
@@ -45,7 +37,6 @@ $this->setFrameMode(true);
                             $resultCounter++;
                             $arrSectionsInside[] = $GrandchildSection;
                         }
-
                         foreach($arrSectionsInside as $GrandchildSection){
                             ?>
                             <? if ($counter < 4): ?>
@@ -61,15 +52,12 @@ $this->setFrameMode(true);
                             <?endif; ?>
 
                             <?
-
                             $counter++;
-
                         }
                         ?>
                         <? if ($counter > 4) { ?>
                             <div class="accordion__more-btn">Показать еще</div>
                         <? } ?>
-
                     </div>
                 </div>
             <? } ?>
