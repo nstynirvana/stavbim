@@ -1,0 +1,59 @@
+
+.about-company-text-block{
+
+}
+.one-text-block{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.one-text-block p{
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: #818181;
+    margin-bottom: 15px;
+}
+.one-text-block .picture{
+
+}
+.one-text-block .picture.left-side{
+    float: left;
+    margin: 0 30px 20px;
+}
+.one-text-block .picture.right-side{
+    float: right;
+    margin: 0 0 20px 30px;
+}
+.one-text-block-container{
+    display: block;
+}
+@media only screen and (max-width: 1279px) {
+
+    .one-text-block p{
+        font-size: 16px;
+    }
+
+}
+@media only screen and (max-width: 767px) {
+
+    .one-text-block .picture{
+        display: inline-block;
+        width: 100%;
+    }
+    .one-text-block .picture img{
+        width: 100%;
+    }
+
+    .one-text-block .picture.left-side{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+    .one-text-block .picture.right-side{
+        margin: 0px;
+        margin-bottom: 20px;
+    }
+
+}
