@@ -1,5 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
 
+<?//dp($arResult);?>
+
 <div class="search-page">
     <form class="myworks__searchpanel" method="get"
           action="<?= $arResult["FORM_ACTION"] ?>"><? if ($arParams["USE_SUGGEST"] === "Y"):
@@ -23,7 +25,7 @@
         ); ?>
 
         <? else: ?>
-            <input placeholder="Поиск" type="search" id="myworks__searchpanel__input" name="q">
+            <input placeholder="Поиск" type="search" id="myworks__searchpanel__input" name="q" value="<?=$arResult["REQUEST"]["QUERY"]?>">
         <? endif; ?>
         <button class="myworks__searchpanel__btn"><img src="/design/icons/search.svg" alt=""></button>
     </form>
@@ -117,6 +119,9 @@
                     </div>
                 </div>
             </div>
+
+
+
 
 
             <? if ($arParams["DISPLAY_BOTTOM_PAGER"] == "Y"): ?>
