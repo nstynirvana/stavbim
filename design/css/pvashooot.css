@@ -58,6 +58,11 @@
 
 }
 
+.product-card__text__manufacturer__value a{
+    color: #1A1A1A;
+    text-decoration: none;
+}
+
 
 @media only screen and (max-width: 1279px) {
 

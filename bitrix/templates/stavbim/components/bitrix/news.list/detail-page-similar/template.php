@@ -1,15 +1,4 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
 
@@ -32,17 +21,16 @@ $this->setFrameMode(true);
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="similar__slider__item-img">
                     <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
                     <img src="<?= $arFile["SRC"] ?>" alt="">
+                    <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
+                        <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
+                    <?endif;?>
                 </a>
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="similar__slider__item-text">
-                    <?
-                    $res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
-                    if ($ar_res = $res->GetNext())
-                    ?>
-                    <div class="similar__slider__item-text-title"><?= $ar_res['NAME'] ?></div>
+                    <div class="similar__slider__item-text-title"><?=$arResult["SECTIONS_LIST"][$arItem["IBLOCK_SECTION_ID"]]?></div>
                     <div class="similar__slider__item-text-descr"><?= $arItem["NAME"] ?></div>
-                    <div class="similar__slider__item-text-price"><?= $arItem["PROPERTIES"]["PRICE"]["VALUE"] ?></div>
+                    <div class="similar__slider__item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
                 </a>
-                <button class="similar__slider__item-text-btn">Добавить в корзину</button>
+                <button class="similar__slider__item-text-btn add2Cart" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
             </div>
         </div>
     <? endforeach; ?>

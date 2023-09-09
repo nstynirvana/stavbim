@@ -1,95 +1,82 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
 
-<?/*dp($arResult)*/?>
-<div class="product-card__wrapper">
-    <div class="product-card__slider__wrapper">
-        <div class="product-card__slider">
-            <? $arFile_1 = CFile::GetFileArray($arResult["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
-            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
-            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
-            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
-            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
-            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
-        </div>
-    </div>
-    <div class="product-card__text">
+<?$sectionName = array_pop($arResult["SECTION"]["PATH"]);?>
 
-        <?
-        $nav = CIBlockSection::GetNavChain(false, $arResult["IBLOCK_SECTION_ID"]);
-        while($arItem = $nav->Fetch()){
-            $ITEMS[] = $arItem;
-        }
-        ?>
+<div class="container product-container">
+    <a href="<?=$sectionName["SECTION_PAGE_URL"]?>" class="back-to-page">
+        <img src="/design/icons/back-to-page.svg" alt="Back Arrow" class="back-to-page-img">
+        <p class="back-to-page-text">Вернуться назад</p>
+        <img src="/design/icons/back-to-page-mobile.svg" alt="Back Arrow" class="back-to-page-img-mobile">
+    </a>
+</div>
 
-        <div class="product-card__text__prevtitle"><?= $ITEMS['0']['NAME'] ?></div>
-        <h1 class="product-card__text__title"><?= $arResult["NAME"] ?></h1>
-        <div class="product-card__text__price"><?= $arResult["PROPERTIES"]["PRICE"]["VALUE"] ?></div>
-        <button class="product-card__text__btn">Добавить в корзину</button>
-        <div class="product-card__text__wrapper">
-            <div class="product-card__text__vendor__block">
-                <div class="product-card__text__vendor__item">Артикул</div>
-                <div class="product-card__text__vendor__value"><?= $arResult["PROPERTIES"]["VENDOR_CODE"]["VALUE"] ?></div>
+<section class="product-card">
+    <div class="container product-card-container">
+
+        <div class="product-card__wrapper">
+            <div class="product-card__slider__wrapper">
+                <div class="product-card__slider">
+                    <?if(!empty($arResult["PROPERTIES"]["PICTURES"]["VALUE"])):?>
+                        <?foreach($arResult["PROPERTIES"]["PICTURES"]["VALUE"] as $pictureOne):?>
+                            <?$arFile_1 = CFile::GetFileArray($pictureOne); ?>
+                            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
+                        <?endforeach;?>
+                    <?else:?>
+                        <? $arFile_1 = CFile::GetFileArray($arResult["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
+                        <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
+                    <?endif;?>
+                </div>
             </div>
-            <div class="product-card__text__manufacturer__block">
-                <div class="product-card__text__manufacturer__item">Производитель</div>
-                <div class="product-card__text__manufacturer__value"><?= $arResult["PROPERTIES"]["PROCREATOR"]["VALUE"] ?></div>
-            </div>
-            <div class="product-card__text__category__block">
-                <div class="product-card__text__category__item">Категория семейства</div>
-                <div class="product-card__text__category__value"><?= $ITEMS['1']['NAME'] ?></div>
-            </div>
-            <div class="product-card__text__number__block">
-                <div class="product-card__text__number__item">Номер OmniClass</div>
-                <div class="product-card__text__number__value"><?= $arResult["PROPERTIES"]["OMNI_NUMBER"]["VALUE"] ?></div>
-            </div>
-            <div class="product-card__text__title__block">
-                <div class="product-card__text__title__item">Заголовок OmniClass</div>
-                <div class="product-card__text__title__value"><?= $arResult["PROPERTIES"]["OMNI_TITLE"]["VALUE"] ?></div>
-            </div>
-            <div class="product-card__text__link__block">
-                <div class="product-card__text__link__item">Ссылка на продукт</div>
-                <a href="" class="product-card__text__link__value"><?= $arResult["PROPERTIES"]["LINK_PRODUCT"]["VALUE"] ?></a>
-            </div>
-            <div class="product-card__text__version__block">
-                <div class="product-card__text__version__item">Версия Revit</div>
-                <div class="product-card__text__version__value"><?= $arResult["PROPERTIES"]["REVIT_VERSION"]["VALUE"] ?></div>
-            </div>
-        </div>
-        <div class="product-card__text__sizes">Доступные типоразмеры:</div>
-        <div class="product-card__text__sizes__block">
-            <div class="product-card__text__sizes__accordion">
-                <div class="product-card__text__sizes__wrapper">
-                    <?foreach($arResult["PROPERTIES"]["TYPE_SIZE"]["VALUE"] as $item):?>
-                    <div class="product-card__text__sizes__item__inner" id="<?= $this->GetEditAreaId($arResult['ID']); ?>">
-                        <p>
-                            <?=$item?>
-                        </p>
-                    </div>
+            <div class="product-card__text">
+                <div class="product-card__text__prevtitle"><?=$sectionName['NAME']?></div>
+                <h1 class="product-card__text__title"><?= $arResult["NAME"] ?></h1>
+                <div class="product-card__text__price"><?=number_format($arResult["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
+                <button class="product-card__text__btn add2Cart" data-itemid="<?=$arResult["ID"]?>" data-price="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
+                <div class="product-card__text__wrapper">
+                    <?foreach($arResult["DISPLAY_PROPERTIES"] as $propCode => $propArray):?>
+
+                        <?if($propArray["PROPERTY_TYPE"] == "E"):?>
+                            <?$visibleValue = $propArray["LINK_ELEMENT_VALUE"][$propArray["VALUE"]]["NAME"];?>
+                        <?else:?>
+                            <?$visibleValue = $propArray["DISPLAY_VALUE"];?>
+                        <?endif;?>
+
+                        <div class="product-card__text__manufacturer__block">
+                            <div class="product-card__text__manufacturer__item"><?=$propArray["NAME"]?></div>
+                            <div class="product-card__text__manufacturer__value"><?=$visibleValue?></div>
+                        </div>
                     <?endforeach;?>
                 </div>
-                <div class="product-card__text__sizes__btn-close"></div>
+                <?if(!empty($arResult["PROPERTIES"]["TYPE_SIZE"]["VALUE"])):?>
+                    <div class="product-card__text__sizes">Доступные типоразмеры:</div>
+                    <div class="product-card__text__sizes__block">
+                        <div class="product-card__text__sizes__accordion">
+                            <div class="product-card__text__sizes__wrapper">
+                                <?foreach($arResult["PROPERTIES"]["TYPE_SIZE"]["VALUE"] as $item):?>
+                                    <div class="product-card__text__sizes__item__inner"><p><?=$item?></p></div>
+                                <?endforeach;?>
+                            </div>
+                            <div class="product-card__text__sizes__btn-close"></div>
+                        </div>
+                    </div>
+                    <div class="product-card__text__sizes__btn-open">Показать все типоразмеры</div>
+                <?endif;?>
             </div>
         </div>
-        <div class="product-card__text__sizes__btn-open">Показать все типоразмеры</div>
+        <?if($arResult["PREVIEW_TEXT"] != "" or $arResult["DETAIL_TEXT"] != ""):?>
+            <div class="product-card__description">
+                <?if($arResult["PREVIEW_TEXT"] != ""):?>
+                    <h2 class="product-card__description__title">Описание</h2>
+                    <div class="product-card__description__subtitle"><?=$arResult["PREVIEW_TEXT"]?></div>
+                <?endif;?>
+                <?if($arResult["DETAIL_TEXT"] != ""):?>
+                    <h3 class="product-card__description__descr">Основной состав проекта:</h3>
+                    <div class="product-card__description__subdescr"><?=$arResult["DETAIL_TEXT"]?></div>
+                <?endif;?>
+            </div>
+        <?endif;?>
+
     </div>
-</div>
-<div class="product-card__description">
-    <h2 class="product-card__description__title">Описание</h2>
-    <div class="product-card__description__subtitle"><?=$arResult["PREVIEW_TEXT"]?></div>
-    <h3 class="product-card__description__descr">Основной состав проекта:</h3>
-    <div class="product-card__description__subdescr"><?=$arResult["DETAIL_TEXT"]?>
-    </div>
-</div>
+</section>
