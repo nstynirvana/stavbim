@@ -1,6 +1,7 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 ?>
+
 <div class="catalog-cards-block">
     <? foreach ($arResult['ITEMS'] as $arItem): ?>
         <?
@@ -13,12 +14,11 @@ $this->setFrameMode(true);
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
                     <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
                     <img src="<?= $arFile["SRC"] ?>" alt="">
+                    <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
+                        <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
+                    <?endif;?>
                 </a>
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-text">
-                    <?
-                    $res = CIBlockSection::GetByID($arItem["IBLOCK_SECTION_ID"]);
-                    if ($ar_res = $res->GetNext())
-                    ?>
                     <div class="catalog-cards-block-item-text-title"><?=$arResult["SECTIONS_LIST"][$arItem["IBLOCK_SECTION_ID"]]?></div>
                     <div class="catalog-cards-block-item-text-descr"><?=$arItem["NAME"]?></div>
                     <div class="catalog-cards-block-item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
