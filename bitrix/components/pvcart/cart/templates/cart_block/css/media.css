@@ -1,0 +1,179 @@
+@media all and (max-width: 767px) {
+    .bc-cart-w-content-item-header-w {
+        display: none;
+    }
+
+    .bc-cart-w-content-item:first-child {
+        border-top: 1px solid #eee;
+        padding: 30px 0 30px;
+
+    }
+
+    .bc-cart-w-content-tbl-w,
+    .bc-cart-w-content-tbl-total,
+    .bc-cart-w-title-w,
+    .bee-form {
+        border-left: none;
+        border-right: none;
+        position: relative;
+    }
+
+    .bc-cart-w-content-item-image {
+        float: none;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 0;
+    }
+
+    .bc-cart-w-content-item-body-1 {
+        text-align: center;
+        width: 40%;
+    }
+
+    .bc-cart-w-content {
+        min-width: 0;
+        width: 320px;
+    }
+
+    .bc-cart-w-content-item-body-1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .bc-cart-w-content-item {
+        display: block;
+        position: relative;
+    }
+
+    .bc-cart-w-content-item-body-1,
+    .bc-cart-w-content-item-body-2,
+    .bc-cart-w-content-item-body-3 {
+        display: block;
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
+    .bc-cart-w-content-price-w {
+        position: relative;
+        font-size: 150%;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .bc-cart-w-content-item-body-2 {
+        border-top: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+        margin: 15px 0;
+        padding: 15px 0;
+        max-width: 220px;
+        margin: 15px auto;
+    }
+
+    .bc-cart-w-content-td-remove-link {
+        right: 20px;
+        position: absolute;
+        top: 25px;
+        margin-top: -5px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .bc-cart-w-content-item-body-3 {
+        text-align: center;
+        position: static;
+    }
+
+    .bc-cart-w-content-counter {
+        position: relative;
+        left: auto;
+        right: auto;
+        margin: 0;
+    }
+
+    .bc-cart-w-content-checkout:visited, .bc-cart-w-content-checkout:link, .bc-cart-w-content-checkout {
+        padding: 2px 16px 0;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        line-height: 3em;
+    }
+
+    .bc-cart-w-delete-all:link, .bc-cart-w-delete-all:visited, .bc-cart-w-delete-all {
+        top: 0;
+        right: 0;
+        padding: 5px 10px 4px 10px;
+        background-color: #ee3733;
+        color: #fff;
+    }
+
+    .bc-cart-w-delete-all:before {
+        content: none;
+    }
+
+    .bc-cart-continue-shopping-link:visited, .bc-cart-continue-shopping-link:link, .bc-cart-continue-shopping-link {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 13px;
+    }
+
+    .bc-cart-w-content-item-body.bc-cart-w-content-item-body-3 {
+        position: static;
+    }
+
+    .bc-cart-w-content-tbl-total {
+        padding: 15px 15px 15px 15px;
+    }
+}
+
+@media all and (max-width: 380px) {
+    .bc-cart-w-delete-all:link, .bc-cart-w-delete-all:visited, .bc-cart-w-delete-all {
+        left: 0;
+        right: auto;
+    }
+
+    .bc-cart-w-visible .bc-cart-w-btn-show-cart {
+        left: auto;
+        right: 0;
+        top: 0;
+        background-color: #ee3733;
+        width: auto;
+        height: auto;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .bc-cart-w-visible .bc-cart-w-btn-show-cart-count {
+        display: none;
+    }
+
+    .bc-cart-w-visible .bc-cart-w-btn-show-cart:before {
+        content: 'Закрыть';
+        height: auto;
+        width: auto;
+        background: none;
+        font-size: 12px;
+        line-height: 21px;
+        color: #fff;
+        padding: 5px 15px 4px;
+        display: inline-block;
+    }
+
+    .bc-cart-w-title-w {
+
+        padding: 46px 15px 25px;
+    }
+
+    .bc-cart-w.bc-cart-w-visible {
+        top: 0;
+    }
+
+    .bc-cart-w-visible .bc-cart-w-btn-show-cart-count__close,
+    .bc-cart-w-visible .bc-cart-w-btn-show-cart-count__ico {
+        display: none;
+    }
+
+}

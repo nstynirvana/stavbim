@@ -1,0 +1,106 @@
+@media all and (max-width: 600px) {
+    .bc-cart-page-w-content-item-header-w {
+        display: none;
+    }
+
+    .bc-cart-page-w-content-item:first-child {
+        border-top: 1px solid #eee;
+        padding: 30px 20px 30px;
+
+    }
+
+    .bc-cart-page-w-content-tbl-w,
+    .bc-cart-page-w-content-tbl-total,
+    .bc-cart-page-w-title-w,
+    .bee-form {
+        border-left: none;
+        border-right: none;
+        position: relative;
+    }
+
+    .bc-cart-page-w-content-item-image {
+        float: none;
+        margin-bottom: 10px;
+        display: inline-block;
+        margin-right: 0;
+    }
+
+    .bc-cart-page-w-content-item-body-1 {
+        text-align: center;
+        width: 40%;
+    }
+    .bc-cart-page-w-conten-bottom {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .bc-cart-page-w-content-item-body-1 {
+        text-align: center;
+        width: 100%;
+    }
+
+    .bc-cart-page-w-content-item {
+        display: block;
+        position: relative;
+    }
+
+    .bc-cart-page-w-content-item-body-1,
+    .bc-cart-page-w-content-item-body-2,
+    .bc-cart-page-w-content-item-body-3 {
+        display: block;
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
+    .bc-cart-page-w-content-price-w {
+        position: relative;
+        font-size: 150%;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .bc-cart-page-w-content-item-body-2 {
+        border-top: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+        margin: 15px 0;
+        padding: 15px 0;
+        max-width: 200px;
+        margin: 15px auto;
+    }
+
+    .bc-cart-page-w-content-td-remove-link {
+        right: 20px;
+        position: absolute;
+        top: 25px;
+        margin-top: -5px;
+        -webkit-background-size: contain;
+        background-size: contain;
+    }
+
+    .bc-cart-page-w-content-item-body-3 {
+        text-align: center;
+        position: static;
+    }
+
+    .bc-cart-page-w-content-counter {
+        position: relative;
+        left: auto;
+        right: auto;
+        margin: 0;
+    }
+}
