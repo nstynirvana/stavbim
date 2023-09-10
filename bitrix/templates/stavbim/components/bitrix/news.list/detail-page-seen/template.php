@@ -32,7 +32,7 @@ $this->setFrameMode(true);
             <div class="yousee__slider__inner__item">
         <? endif; ?>
 
-                <div class="yousee__slider__item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <div class="yousee__slider__item-wrapper product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                     <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="yousee__slider__item-img">
                         <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
                         <img src="<?= $arFile["SRC"] ?>" alt="">
@@ -45,7 +45,7 @@ $this->setFrameMode(true);
                         <div class="yousee__slider__item-text-descr"><?= $arItem["NAME"] ?></div>
                         <div class="yousee__slider__item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
                     </a>
-                    <button class="yousee__slider__item-text-btn add2Cart" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
+                    <button class="yousee__slider__item-text-btn add2Cart product-buy-link" data-id="<?=$arItem["ID"]?>" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
                 </div>
             </div>
 

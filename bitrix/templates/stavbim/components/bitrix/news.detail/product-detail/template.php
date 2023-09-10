@@ -29,11 +29,11 @@ $this->setFrameMode(true);
                     <?endif;?>
                 </div>
             </div>
-            <div class="product-card__text">
+            <div class="product-card__text product-buy-block">
                 <div class="product-card__text__prevtitle"><?=$sectionName['NAME']?></div>
                 <h1 class="product-card__text__title"><?= $arResult["NAME"] ?></h1>
                 <div class="product-card__text__price"><?=number_format($arResult["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
-                <button class="product-card__text__btn add2Cart" data-itemid="<?=$arResult["ID"]?>" data-price="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
+                <button class="product-card__text__btn add2Cart product-buy-link" data-id="<?=$arResult["ID"]?>" data-itemid="<?=$arResult["ID"]?>" data-price="<?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
                 <div class="product-card__text__wrapper">
                     <?foreach($arResult["DISPLAY_PROPERTIES"] as $propCode => $propArray):?>
 

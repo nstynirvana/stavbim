@@ -36,7 +36,7 @@ $this->setFrameMode(true);
 
                 <?$sectionID = $arItem["IBLOCK_SECTION_ID"];?>
 
-                <div class="works__card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <div class="works__card product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__img-container">
                         <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
                         <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
@@ -47,7 +47,7 @@ $this->setFrameMode(true);
                     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__card-modal"><?=$arResult["SECTIONS_LIST"][$sectionID]?></a>
                     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__card-descr"><?=$arItem["NAME"]?></a>
                     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__card-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</a>
-                    <button class="works__card-addToBasket add2Cart" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить модель в корзину</button>
+                    <button class="works__card-addToBasket add2Cart product-buy-link" data-id="<?=$arItem["ID"]?>" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить модель в корзину</button>
                 </div>
             <? endforeach; ?>
         </div>
@@ -57,7 +57,7 @@ $this->setFrameMode(true);
 
                 <?$sectionID = $arItem["IBLOCK_SECTION_ID"];?>
 
-                <div class="works__slide">
+                <div class="works__slide product-buy-block">
                     <div class="works__card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__img-container">
                             <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
@@ -69,7 +69,7 @@ $this->setFrameMode(true);
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__card-modal"><?=$arResult["SECTIONS_LIST"][$sectionID]?></a>
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__card-descr"><?=$arItem["NAME"]?></a>
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__card-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</a>
-                        <button class="works__card-addToBasket add2Cart" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить модель в корзину</button>
+                        <button class="works__card-addToBasket add2Cart product-buy-link" data-id="<?=$arItem["ID"]?>" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить модель в корзину</button>
                     </div>
                 </div>
             <? endforeach; ?>

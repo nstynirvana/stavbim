@@ -17,7 +17,7 @@ $this->setFrameMode(true);
 
             <div class="item__catalog-cards-block-item">
 
-                <div class="catalog-cards-block-item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                <div class="catalog-cards-block-item-wrapper product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
                         <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
                         <img src="<?= $arFile["SRC"] ?>" alt="">
@@ -30,7 +30,7 @@ $this->setFrameMode(true);
                         <div class="catalog-cards-block-item-text-descr"><?= $arItem["NAME"]  ?></div>
                         <div class="catalog-cards-block-item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
                     </a>
-                    <button class="catalog-cards-block-item-text-btn add2Cart" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
+                    <button class="catalog-cards-block-item-text-btn add2Cart product-buy-link" data-id="<?=$arItem["ID"]?>" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
                 </div>
             </div>
         <? endforeach; ?>
