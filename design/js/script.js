@@ -88,16 +88,15 @@ window.addEventListener('DOMContentLoaded', () => {
         basketPopup.classList.remove('active');
     });
 
-
-    basketInputOnlinePay.addEventListener('change', (e) => {
+    /*basketInputOnlinePay.addEventListener('change', (e) => {
         basketFormOnlinePay.classList.add('active');
         basketFormCryptoPay.classList.remove('active');
-    });
+    });*/
 
-    basketInputCryptoPay.addEventListener('change', (e) => {
+    /*basketInputCryptoPay.addEventListener('change', (e) => {
         basketFormOnlinePay.classList.remove('active');
         basketFormCryptoPay.classList.add('active');
-    });
+    });*/
 
     basketPopupItem.forEach((item, index) => {
         const removeBlockBtn = document.querySelectorAll('.basket__item__remove');
