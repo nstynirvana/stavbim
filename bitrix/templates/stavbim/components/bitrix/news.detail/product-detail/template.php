@@ -80,16 +80,10 @@ $this->setFrameMode(true);
                 <?endif;?>
             </div>
         </div>
-        <?if($arResult["PREVIEW_TEXT"] != "" or $arResult["DETAIL_TEXT"] != ""):?>
+        <?if($arResult["DETAIL_TEXT"] != ""):?>
             <div class="product-card__description">
-                <?if($arResult["PREVIEW_TEXT"] != ""):?>
-                    <h2 class="product-card__description__title">Описание</h2>
-                    <div class="product-card__description__subtitle"><?=$arResult["PREVIEW_TEXT"]?></div>
-                <?endif;?>
-                <?if($arResult["DETAIL_TEXT"] != ""):?>
-                    <h3 class="product-card__description__descr">Основной состав проекта:</h3>
-                    <div class="product-card__description__subdescr"><?=$arResult["DETAIL_TEXT"]?></div>
-                <?endif;?>
+                <h2 class="product-card__description__title">Описание</h2>
+                <?=$arResult["DETAIL_TEXT"]?>
             </div>
         <?endif;?>
 
