@@ -2,6 +2,21 @@
 $this->setFrameMode(true);
 ?>
 
+<script>
+    //slider Product.html
+    window.addEventListener('DOMContentLoaded', () => {
+        $('.product-card__slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            variableWidth: true,
+            arrows: true,
+            dotsClass: 'slick-dots product-card__dots',
+        });
+    });
+</script>
+
 <?$sectionName = array_pop($arResult["SECTION"]["PATH"]);?>
 
 <div class="container product-container">

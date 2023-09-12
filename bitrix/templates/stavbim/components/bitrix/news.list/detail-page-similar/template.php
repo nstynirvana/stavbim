@@ -2,6 +2,39 @@
 $this->setFrameMode(true);
 ?>
 
+<script>
+    //slider Similar
+    window.addEventListener('DOMContentLoaded', () => {
+        $('.similar__slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            variableWidth: true,
+            arrows: true,
+            dotsClass: 'slick-dots similar__dots',
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        arrows: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 546,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    });
+</script>
 
 <div class="similar__slider">
 

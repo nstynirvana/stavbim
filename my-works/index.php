@@ -3,11 +3,9 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Мои работы");
 ?>
     <div class="container">
-        <?$APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", Array(
-
-        ),
+        <? $APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", array(),
             false
-        );?>
+        ); ?>
 
         <? $APPLICATION->IncludeComponent("bitrix:search.form", "seacrh-form-on-page", array(
             "COMPONENT_TEMPLATE" => "flat",
@@ -22,8 +20,6 @@ $APPLICATION->SetTitle("Мои работы");
         <div class="container">
 
             <?
-
-
             if (isset($_REQUEST['sortField'])) {
                 $_SESSION["SORT"]["FIELD"] = $_REQUEST['sortField'];
             } else {
@@ -40,7 +36,6 @@ $APPLICATION->SetTitle("Мои работы");
                 }
             }
             ?>
-
             <div class="block__sort">
                 <div class="myworks__block__slider">
 
@@ -66,16 +61,14 @@ $APPLICATION->SetTitle("Мои работы");
                             </div>
                         </div>
                     </div>
-
-                    <!--                --><? //echo "<pre>"; print_r($_SESSION["SORT"]["FIELD"]); echo "</pre>";?>
-                    <!--                --><? //echo "<pre>"; print_r($_SESSION["SORT"]["ORDER"]); echo "</pre>";?>
-
+                    <?$catalogListFilter = array("PROPERTY_MY_WORK_VALUE" => "Y");?>
+                    <?// dp($catalogListFilter) ?>
                     <? $APPLICATION->IncludeComponent(
                         "bitrix:news.list",
                         "myworks-page-catalog",
                         array(
                             "ACTIVE_DATE_FORMAT" => "d.m.Y",
-                            "ADD_SECTIONS_CHAIN" => "Y",
+                            "ADD_SECTIONS_CHAIN" => "N",
                             "AJAX_MODE" => "N",
                             "AJAX_OPTION_ADDITIONAL" => "",
                             "AJAX_OPTION_HISTORY" => "N",
@@ -97,11 +90,11 @@ $APPLICATION->SetTitle("Мои работы");
                                 0 => "",
                                 1 => "",
                             ),
-                            "FILTER_NAME" => "",
+                            "FILTER_NAME" => "catalogListFilter",
                             "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                            "IBLOCK_ID" => "3",
+                            "IBLOCK_ID" => "5",
                             "IBLOCK_TYPE" => "catalog",
-                            "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                             "INCLUDE_SUBSECTIONS" => "Y",
                             "MESSAGE_404" => "",
                             "NEWS_COUNT" => "6",
@@ -112,8 +105,8 @@ $APPLICATION->SetTitle("Мои работы");
                             "PAGER_SHOW_ALWAYS" => "Y",
                             "PAGER_TEMPLATE" => "navigation",
                             "PAGER_TITLE" => "",
-                            "PARENT_SECTION" => "3",
-                            "PARENT_SECTION_CODE" => "gotovye-raboty",
+                            "PARENT_SECTION" => "",
+                            "PARENT_SECTION_CODE" => "",
                             "PREVIEW_TRUNCATE_LEN" => "",
                             "PROPERTY_CODE" => array(
                                 0 => "",
@@ -132,6 +125,8 @@ $APPLICATION->SetTitle("Мои работы");
                             "SORT_ORDER1" => $_SESSION["SORT"]["ORDER"],
                             "STRICT_SECTION_CHECK" => "N",
                             "COMPONENT_TEMPLATE" => "myworks-page-catalog",
+                            "SORT_BY2" => "SORT",
+                            "SORT_ORDER2" => "ASC"
                         ),
                         false
                     ); ?>
@@ -145,7 +140,7 @@ $APPLICATION->SetTitle("Мои работы");
     "text-block-page",
     array(
         "ACTIVE_DATE_FORMAT" => "d.m.Y",
-        "ADD_SECTIONS_CHAIN" => "Y",
+        "ADD_SECTIONS_CHAIN" => "N",
         "AJAX_MODE" => "N",
         "AJAX_OPTION_ADDITIONAL" => "",
         "AJAX_OPTION_HISTORY" => "N",
@@ -163,12 +158,15 @@ $APPLICATION->SetTitle("Мои работы");
         "DISPLAY_PICTURE" => "Y",
         "DISPLAY_PREVIEW_TEXT" => "Y",
         "DISPLAY_TOP_PAGER" => "N",
-        "FIELD_CODE" => array("", ""),
+        "FIELD_CODE" => array(
+            0 => "",
+            1 => "",
+        ),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
         "IBLOCK_ID" => "2",
         "IBLOCK_TYPE" => "infoblocks",
-        "INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+        "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "Y",
         "MESSAGE_404" => "",
         "NEWS_COUNT" => "20",
@@ -182,7 +180,10 @@ $APPLICATION->SetTitle("Мои работы");
         "PARENT_SECTION" => "10",
         "PARENT_SECTION_CODE" => "blok-s-tekstom-vnizu-stranitsy",
         "PREVIEW_TRUNCATE_LEN" => "",
-        "PROPERTY_CODE" => array("", ""),
+        "PROPERTY_CODE" => array(
+            0 => "",
+            1 => "",
+        ),
         "SET_BROWSER_TITLE" => "Y",
         "SET_LAST_MODIFIED" => "N",
         "SET_META_DESCRIPTION" => "Y",
@@ -194,8 +195,10 @@ $APPLICATION->SetTitle("Мои работы");
         "SORT_BY2" => "SORT",
         "SORT_ORDER1" => "DESC",
         "SORT_ORDER2" => "ASC",
-        "STRICT_SECTION_CHECK" => "N"
-    )
+        "STRICT_SECTION_CHECK" => "N",
+        "COMPONENT_TEMPLATE" => "text-block-page"
+    ),
+    false
 ); ?>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
