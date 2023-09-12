@@ -36,13 +36,14 @@ $this->setFrameMode(true);
                     <?if(!empty($arResult["PROPERTIES"]["PICTURES"]["VALUE"])):?>
                         <?foreach($arResult["PROPERTIES"]["PICTURES"]["VALUE"] as $pictureOne):?>
                             <?$arFile_1 = CFile::GetFileArray($pictureOne); ?>
-                            <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
+                            <img data="<?=$arResult["PREVIEW_TEXT"]?>" src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
                         <?endforeach;?>
                     <?else:?>
                         <? $arFile_1 = CFile::GetFileArray($arResult["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
-                        <img src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
+                        <img data="<?=$arResult["PREVIEW_TEXT"]?>" src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
                     <?endif;?>
                 </div>
+                <div class="tooltip-block"></div>
             </div>
             <div class="product-card__text product-buy-block">
                 <div class="product-card__text__prevtitle"><?=$sectionName['NAME']?></div>
