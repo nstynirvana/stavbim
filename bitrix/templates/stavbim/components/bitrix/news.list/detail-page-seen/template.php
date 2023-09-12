@@ -2,6 +2,19 @@
 $this->setFrameMode(true);
 ?>
 
+<script>
+    //slider Yousee
+    window.addEventListener('DOMContentLoaded', () => {
+        $('.yousee__slider').slick({
+            dots: true,
+            infinite: false,
+            arrows: true,
+            dotsClass: 'slick-dots similar__dots',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+    });
+</script>
 
 <div class="yousee__slider">
     <?
@@ -37,7 +50,7 @@ $this->setFrameMode(true);
                         <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
                         <img src="<?= $arFile["SRC"] ?>" alt="">
                         <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
-                            <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
+                            <img src="/design/icons/works_icon.svg" style="height: 45px; width: 45px" class="myworks__block__slider__item-img-pdf" alt="">
                         <?endif;?>
                     </a>
                     <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="yousee__slider__item-text">

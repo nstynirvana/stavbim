@@ -1,6 +1,42 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 ?>
+
+<script>
+    //slider Similar
+    window.addEventListener('DOMContentLoaded', () => {
+        $('.similar__slider').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            variableWidth: true,
+            arrows: true,
+            dotsClass: 'slick-dots similar__dots',
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        arrows: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 546,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+
 <div class="similar__slider">
 
     <? foreach ($arResult['ITEMS'] as $arItem): ?>
@@ -20,7 +56,7 @@ $this->setFrameMode(true);
                     <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
                     <img src="<?= $arFile["SRC"] ?>" alt="">
                     <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
-                        <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
+                        <img src="/design/icons/works_icon.svg" style="height: 30px; width: 30px" class="myworks__block__slider__item-img-pdf" alt="">
                     <?endif;?>
                 </a>
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="similar__slider__item-text">
