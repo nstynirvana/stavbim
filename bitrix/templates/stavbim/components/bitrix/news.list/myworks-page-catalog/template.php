@@ -34,13 +34,13 @@ $this->setFrameMode(true);
 
     <div class="myworks__block__slider__item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
         <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="myworks__block__slider__item-img">
-            <? $arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
+            <? $arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
             <? $arFile_2 = CFile::GetFileArray($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]); ?>
             <img src="<?= $arFile_1["SRC"] ?>" class="myworks__block__slider__item-img-main" alt="">
             <img src="<?= $arFile_2["SRC"] ?>" class="myworks__block__slider__item-img-pdf" alt="">
         </a>
         <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="myworks__block__slider__item-text">
-            <div class="myworks__block__slider__item-text-title">Модель для проектирования</div>
+            <div class="myworks__block__slider__item-text-title"><?=$arResult["SECTIONS_LIST"][$arItem["IBLOCK_SECTION_ID"]]?></div>
             <div class="myworks__block__slider__item-text-descr"><?= $arItem["NAME"] ?></div>
             <div class="myworks__block__slider__item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
         </a>

@@ -1,7 +1,16 @@
-
-.about-company-text-block{
-
+.tooltip-block{
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 5px 8px;
+    font-size: 10px;
+    width: 140px;
+    line-height: 13px;
+    color: black;
+    z-index: 400;
+    display:none;
 }
+
 .one-text-block{
     display: inline-block;
     width: 100%;

@@ -12,7 +12,7 @@ $this->setFrameMode(true);
         <div class="catalog-cards-block-item">
             <div class="catalog-cards-block-item-wrapper product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
-                    <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
+                    <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
                     <img src="<?= $arFile["SRC"] ?>" alt="">
                     <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
                         <img src="/design/icons/works_icon.svg" class="works__icon" alt="">

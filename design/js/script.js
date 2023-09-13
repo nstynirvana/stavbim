@@ -70,23 +70,23 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //Basket
 
-    basketOpenPopupBtn.addEventListener('click', () => {
-        basketPopup.classList.toggle('active');
-        if (basketPopup.classList.contains('active')) {
-            searchPanel.classList.remove('active');
-            mobileMenuBtn.classList.remove('active');
-            mobileMenuContent.classList.remove('active');
-            dropList.classList.remove('active');
-            dropListBtn.classList.remove('active');
-            moreMenuList.classList.remove('active');
-            moreMenuWrapper.classList.remove('active');
-            mobileMenuWrapper.classList.remove('active');
-        }
-    });
+    // basketOpenPopupBtn.addEventListener('click', () => {
+    //     basketPopup.classList.toggle('active');
+    //     if (basketPopup.classList.contains('active')) {
+    //         searchPanel.classList.remove('active');
+    //         mobileMenuBtn.classList.remove('active');
+    //         mobileMenuContent.classList.remove('active');
+    //         dropList.classList.remove('active');
+    //         dropListBtn.classList.remove('active');
+    //         moreMenuList.classList.remove('active');
+    //         moreMenuWrapper.classList.remove('active');
+    //         mobileMenuWrapper.classList.remove('active');
+    //     }
+    // });
 
-    basketClosePopupBtn.addEventListener('click', () => {
-        basketPopup.classList.remove('active');
-    });
+    // basketClosePopupBtn.addEventListener('click', () => {
+    //     basketPopup.classList.remove('active');
+    // });
 
     /*basketInputOnlinePay.addEventListener('change', (e) => {
         basketFormOnlinePay.classList.add('active');
@@ -98,32 +98,32 @@ window.addEventListener('DOMContentLoaded', () => {
         basketFormCryptoPay.classList.add('active');
     });*/
 
-    basketPopupItem.forEach((item, index) => {
-        const removeBlockBtn = document.querySelectorAll('.basket__item__remove');
-        removeBlockBtn[index].addEventListener('click', () => {
-            item.remove();
-            countPrice();
-        });
-    });
+    // basketPopupItem.forEach((item, index) => {
+    //     const removeBlockBtn = document.querySelectorAll('.basket__item__remove');
+    //     removeBlockBtn[index].addEventListener('click', () => {
+    //         item.remove();
+    //         countPrice();
+    //     });
+    // });
 
-    function countPrice() {
-        const result = [];
-
-        let sum = 0;
-
-        document.querySelectorAll('.basket__item__thing__descr__price').forEach(item => {
-            const digits = item.innerHTML.match(/\d+/g).join('');
-            result.push(+digits);
-        });
-
-        for (let i = 0; i < result.length; i++) {
-            sum += result[i];
-        }
-
-        basketPrice.textContent = `${sum} ₽`;
-    }
-
-    countPrice();
+    // function countPrice() {
+    //     const result = [];
+    //
+    //     let sum = 0;
+    //
+    //     document.querySelectorAll('.basket__item__thing__descr__price').forEach(item => {
+    //         const digits = item.innerHTML.match(/\d+/g).join('');
+    //         result.push(+digits);
+    //     });
+    //
+    //     for (let i = 0; i < result.length; i++) {
+    //         sum += result[i];
+    //     }
+    //
+    //     basketPrice.textContent = `${sum} ₽`;
+    // }
+    //
+    // countPrice();
 
     //mobile menu
     mobileMenuBtn.addEventListener('click', () => {
@@ -405,4 +405,20 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+
+});
+
+$(document).ready(function(){//страница загрузилась
+    $('.product-card__slider').hover(function(){	//при наведении на элемент:
+        var helptext = $('.product-card__slider__item').attr('data'); //текст подсказки
+        $('.tooltip-block').html(helptext).show();	//размещаем текст подсказки в блок тултипа и делаем его видимым
+        console.log(helptext);
+        //далее устанавливаем тултипу значения позиции с помощью абсолютного позиционирования:
+        //позиция элемента сверху + высота элемента -> $(this).offset().top+$(this).height()
+        //позиция элемента слева -> $(this).offset().left
+        $('.tooltip-block').offset({top:$(this).offset().top+$(this).height(),left:$(this).offset().left});
+    },function(){
+        $('.tooltip-block').hide();	//скрываем тултип
+    });
 });

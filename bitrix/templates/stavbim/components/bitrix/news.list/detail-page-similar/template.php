@@ -52,7 +52,7 @@ $this->setFrameMode(true);
             <div class="similar__slider__item-wrapper product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                 <? /*dp($arItem)*/?>
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="similar__slider__item-img">
-                    <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]); ?>
+                    <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
                     <img src="<?= $arFile["SRC"] ?>" alt="">
                     <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
                         <img src="/design/icons/works_icon.svg" class="works__icon" alt="">

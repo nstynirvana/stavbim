@@ -38,7 +38,7 @@ $this->setFrameMode(true);
 
                 <div class="works__card product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                     <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__img-container">
-                        <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
+                        <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]);?>
                         <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
                         <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
                             <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
@@ -60,7 +60,7 @@ $this->setFrameMode(true);
                 <div class="works__slide product-buy-block">
                     <div class="works__card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__img-container">
-                            <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURE_DESKTOP"]["VALUE"]);?>
+                            <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]);?>
                             <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
                             <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
                                 <img src="/design/icons/works_icon.svg" class="works__icon" alt="">

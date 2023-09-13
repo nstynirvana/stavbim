@@ -3,16 +3,16 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Заказать разработку семейства");
 ?>
     <div class="container">
-<? $APPLICATION->IncludeComponent(
-    "bitrix:breadcrumb",
-    "breadcrumbs",
-    array(
-        "COMPONENT_TEMPLATE" => "breadcrumbs",
-        "PATH" => "",
-        "SITE_ID" => "s1",
-        "START_FROM" => "0"
-    )
-); ?>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "breadcrumbs",
+            array(
+                "COMPONENT_TEMPLATE" => "breadcrumbs",
+                "PATH" => "",
+                "SITE_ID" => "s1",
+                "START_FROM" => "0"
+            )
+        ); ?>
     </div>
 <? $APPLICATION->IncludeComponent(
     "bitrix:news.list",
@@ -74,7 +74,7 @@ $APPLICATION->SetTitle("Заказать разработку семейства
     <section class="examples">
     <div class="container">
         <div class="block__sort">
-
+            <? $catalogListFilter = array("PROPERTY_MY_WORK_EXAMPLE_VALUE" => "Y"); ?>
             <? $APPLICATION->IncludeComponent(
                 "bitrix:news.list",
                 "myworks-page-catalog-order",
@@ -99,10 +99,13 @@ $APPLICATION->SetTitle("Заказать разработку семейства
                     "DISPLAY_PICTURE" => "Y",
                     "DISPLAY_PREVIEW_TEXT" => "Y",
                     "DISPLAY_TOP_PAGER" => "N",
-                    "FIELD_CODE" => array(0 => "", 1 => "",),
-                    "FILTER_NAME" => "",
+                    "FIELD_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "FILTER_NAME" => "catalogListFilter",
                     "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-                    "IBLOCK_ID" => "3",
+                    "IBLOCK_ID" => "5",
                     "IBLOCK_TYPE" => "catalog",
                     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
                     "INCLUDE_SUBSECTIONS" => "Y",
@@ -115,11 +118,15 @@ $APPLICATION->SetTitle("Заказать разработку семейства
                     "PAGER_SHOW_ALWAYS" => "N",
                     "PAGER_TEMPLATE" => "navigation",
                     "PAGER_TITLE" => "Новости",
-                    "PARENT_SECTION" => "11",
-                    "PARENT_SECTION_CODE" => "primery-rabot",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
                     "PREVIEW_TRUNCATE_LEN" => "",
-                    "PROPERTY_CODE" => array(0 => "", 1 => "PICTURE_DESKTOP", 2 => "",),
-                    "SET_BROWSER_TITLE" => "Y",
+                    "PROPERTY_CODE" => array(
+                        0 => "",
+                        1 => "PICTURE_DESKTOP",
+                        2 => "",
+                    ),
+                    "SET_BROWSER_TITLE" => "N",
                     "SET_LAST_MODIFIED" => "N",
                     "SET_META_DESCRIPTION" => "Y",
                     "SET_META_KEYWORDS" => "Y",
@@ -131,7 +138,8 @@ $APPLICATION->SetTitle("Заказать разработку семейства
                     "SORT_ORDER1" => "DESC",
                     "SORT_ORDER2" => "ASC",
                     "STRICT_SECTION_CHECK" => "N"
-                )
+                ),
+                false
             ); ?>
         </div>
     </div>
