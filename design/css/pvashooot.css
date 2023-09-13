@@ -1,12 +1,12 @@
 .tooltip-block{
     position: absolute;
     background: white;
-    border: 1px solid rgb(230, 230, 230);
+    border: 1px solid black;
     padding: 5px 8px;
     font-size: 10px;
     width: 140px;
     line-height: 13px;
-    color: rgb(82, 82, 82);
+    color: black;
     z-index: 400;
     display:none;
 }

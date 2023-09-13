@@ -46,7 +46,7 @@ $this->setFrameMode(true);
 
 <section class="product">
     <div class="product__info">
-        <?$arFile = CFile::GetFileArray($arResult["SECTION"]["DETAIL_PICTURE"]);?>
+        <?$arFile = CFile::GetFileArray($arResult["SECTION"]["PICTURE"]);?>
         <div class="product__info-img"><img src="<?= $arFile["SRC"] ?>" alt=""></div>
         <div class="product__info-block">
             <h1 class="product__info-block-title"><?= $arResult["SECTION"]["NAME"] ?></h1>

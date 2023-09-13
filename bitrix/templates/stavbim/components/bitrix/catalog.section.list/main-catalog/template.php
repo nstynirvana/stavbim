@@ -22,7 +22,7 @@ $this->setFrameMode(true);
                             <? $arFile_1 = CFile::GetFileArray($childSection["PICTURE"]); ?>
                             <? $arFile_2 = CFile::GetFileArray($childSection["DETAIL_PICTURE"]); ?>
                             <img src="<?= $arFile_1["SRC"] ?>" class="catalog__card-img-desc" alt="">
-                            <img src="<?= $arFile_2["SRC"] ?>" class="catalog__card-img-tablet" alt="">
+                            <img src="<?= $arFile_1["SRC"] ?>" class="catalog__card-img-tablet" alt="">
                         </div>
                         <div class="catalog__card-descr"><p><?= $childSection["NAME"] ?></p></div>
                     </a>
