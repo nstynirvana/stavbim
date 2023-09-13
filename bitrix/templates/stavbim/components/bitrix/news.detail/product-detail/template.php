@@ -38,7 +38,9 @@ $this->setFrameMode(true);
                         <img data="<?= $arResult["PREVIEW_TEXT"] ?>" src="<?= $arFile_1["SRC"] ?>" alt="" class="product-card__slider__item">
                     <? endforeach; ?>
                 </div>
-                <div class="tooltip-block"></div>
+                <?if(!empty($arResult["PREVIEW_TEXT"])):?>
+                    <div class="tooltip-block"></div>
+                <? endif; ?>
             </div>
             <div class="product-card__text product-buy-block">
                 <div class="product-card__text__prevtitle"><?= $sectionName['NAME'] ?></div>
