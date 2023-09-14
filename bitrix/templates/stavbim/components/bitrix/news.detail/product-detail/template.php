@@ -39,7 +39,10 @@ $this->setFrameMode(true);
                     <? endforeach; ?>
                 </div>
                 <?if(!empty($arResult["PREVIEW_TEXT"])):?>
-                    <div class="tooltip-block"></div>
+                <div class="tooltip-block">
+                    <img src="/design/icons/tooltip_icon.svg" alt="" class="tooltip-block_icon">
+                    <p class="tooltip-block_text"></p>
+                </div>
                 <? endif; ?>
             </div>
             <div class="product-card__text product-buy-block">

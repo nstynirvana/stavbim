@@ -409,16 +409,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-$(document).ready(function(){//страница загрузилась
-    $('.product-card__slider').hover(function(){	//при наведении на элемент:
-        var helptext = $('.product-card__slider__item').attr('data'); //текст подсказки
-        $('.tooltip-block').html(helptext).show();	//размещаем текст подсказки в блок тултипа и делаем его видимым
-        console.log(helptext);
-        //далее устанавливаем тултипу значения позиции с помощью абсолютного позиционирования:
-        //позиция элемента сверху + высота элемента -> $(this).offset().top+$(this).height()
-        //позиция элемента слева -> $(this).offset().left
-        $('.tooltip-block').offset({top:$(this).offset().top+$(this).height(),left:$(this).offset().left});
+$(document).ready(function(){
+    $('.product-card__slider').hover(function(){
+        var helptext = $('.product-card__slider__item').attr('data');
+        $('.tooltip-block_text').html(helptext).show();
+        $('.tooltip-block').show();
     },function(){
-        $('.tooltip-block').hide();	//скрываем тултип
+        $('.tooltip-block_text').hide();
+        $('.tooltip-block').hide();
     });
 });

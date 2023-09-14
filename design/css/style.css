@@ -7032,6 +7032,7 @@
   .product-card__slider__wrapper {
     width: 290px;
     padding: 49px 23px;
+    margin: 0 auto;
   }
   .product-card__slider__item {
     height: 190px;
