@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("Мои работы");
         ); ?>
 
     </div>
-    <section class="myworks__block">
+    <section class="myworks__block ix-cards-wrap">
         <div class="container">
 
             <?

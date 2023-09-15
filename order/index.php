@@ -71,7 +71,7 @@ $APPLICATION->SetTitle("Заказать разработку семейства
         "STRICT_SECTION_CHECK" => "N"
     )
 ); ?>
-    <section class="examples">
+    <section class="examples ix-cards-wrap">
     <div class="container">
         <div class="block__sort">
             <? $catalogListFilter = array("PROPERTY_MY_WORK_EXAMPLE_VALUE" => "Y"); ?>

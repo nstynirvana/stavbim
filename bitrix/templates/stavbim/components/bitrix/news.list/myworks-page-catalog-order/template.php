@@ -11,6 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+$page = $arResult['NAV_RESULT']->NavPageNomer;
+$totalPages = $arResult['NAV_RESULT']->NavPageCount;
+$pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
 ?>
 
 <div class="brands__title-wrapper">
@@ -25,7 +28,7 @@ $this->setFrameMode(true);
 
 <? $worksCounter = 1; ?>
 <div class="yousee__slider__item">
-    <div class="yousee__slider__inner">
+    <div class="yousee__slider__inner ix-list-block">
 <? foreach ($arResult['ITEMS'] as $arItem): ?>
 
 <?
@@ -37,9 +40,9 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 
 
 <? if ($worksCounter == 1 || $worksCounter == 6): ?>
-        <div class="yousee__slider__inner__item big">
+        <div class="yousee__slider__inner__item big ix-list-item">
     <? else: ?>
-            <div class="yousee__slider__inner__item">
+            <div class="yousee__slider__inner__item ix-list-item">
         <? endif; ?>
 
         <div class="yousee__slider__item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
@@ -61,7 +64,17 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
 </div>
 </div>
 
-<? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
-    <br/><?= $arResult["NAV_STRING"] ?>
-<? endif; ?>
+<?if($page != $totalPages):?>
+    <?if($totalPages != 0):?>
+        <div class="action ix-nav-block">
+            <a href="#" class="btn btn-primary btn-outline ix-show-more-btn"  data-url="<?= $APPLICATION->GetCurPageParam($pageN.'=' . ($page + 1), [$pageN, 'clear_cache']) ?>">
+                Показать еще
+            </a>
 
+            <? if ($arParams["DISPLAY_BOTTOM_PAGER"]): ?>
+                <?= $arResult["NAV_STRING"] ?>
+            <? endif; ?>
+
+        </div>
+    <?endif;?>
+<?endif;?>

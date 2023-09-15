@@ -92,8 +92,8 @@ endif;
             false
         ); ?>
     </div>
-    <section class="catalog-cards">
-        <div class="container">
+    <section class="catalog-cards ix-cards-wrap">
+        <div class="container ">
 
             <?
             if (isset($_REQUEST['sortField'])) {
@@ -220,7 +220,7 @@ endif;
         </a>
     </div>
 
-    <section class="item__catalog">
+    <section class="item__catalog ix-cards-wrap">
         <div class="container">
             <div class="item__catalog__wrapper">
                 <div class="item__catalog__filter-block">
