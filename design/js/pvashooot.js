@@ -4,7 +4,7 @@ function setMainFilterItem(id_element) {
 
 }
 
-function scrollMore() {
+$(function () {
     "use strict";
 
     var lock = false;
@@ -117,12 +117,26 @@ function scrollMore() {
             ListLoader(wrap, url, append);
         });
 
-}
-
-$(window).scroll(function(){
-    $(scrollMore)
 });
 
-$(document).ready(function(){
-    $(scrollMore)
+$(window).scroll(function(){
+
+    //СКОЛЬКО УЖЕ ПРОКРУТИЛИ
+    var currentWindowScroll = $(window).scrollTop();
+    //ОТПРАВНАЯ ТОЧКА ЭЛЕМЕНТА
+    var blockStart = $("#content").offset().top;
+    //ВЫСОТА БЛОКА
+    var blockHeight = $("#content").height();
+    //ВЫСОТА ПОЛЬЗОВАТЕЛЬСКОГО ОКНА БРАУЗЕРА
+    var innerHeight = $(window).innerHeight();
+    //ОТСТУП
+    var diff = 300;
+    //ГИГОУРОВНЕНИЕ
+    var optimalSideWidow = blockStart+blockHeight-diff-innerHeight;
+
+    //ЖМИ НА КНОПКУ
+    if(currentWindowScroll > optimalSideWidow){
+        $(".ix-show-more-btn").click();
+    }
+
 });
