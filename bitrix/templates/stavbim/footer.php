@@ -66,7 +66,6 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="/design/js/script.js"></script>
-<script src="/design/js/pvashooot.js"></script>
-<script type="text/javascript" src="http://oemar.googlecode.com/files/scroll-startstop.events.jquery.js"></script>
+<script src="/design/js/pvashooot.js?v=<?=rand()?>"></script>
 </body>
 </html>
