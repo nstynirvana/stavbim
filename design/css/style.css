@@ -3689,7 +3689,7 @@
   .works__icon {
     position: absolute;
     top: 15px;
-    left: -145px;
+    left: -130px;
     width: 30px;
     height: 30px;
   }
@@ -6098,6 +6098,11 @@
   }
 }
 
+@media only screen and (max-width: 1325px) {
+  .works__icon {
+    left: -100px;
+  }
+}
 @media only screen and (max-width: 945px) {
   .works__icon {
     left: -100px;

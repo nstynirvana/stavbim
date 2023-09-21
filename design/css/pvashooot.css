@@ -225,7 +225,6 @@
 
 }
 
-.jscroll-loading{
-    text-align: center;
-    padding: 7px 0;
+.ix-show-more-btn{
+    display: none;
 }
