@@ -16,7 +16,7 @@ function beeCartInit(){
     jQuery("body").on("click", '.product-buy-link:not(".product-buy-link_in-cart")', function () {
 
         //console.log("click button to carf");
-
+        
         var btn = this;
         var id = jQuery(this).attr("data-id");
         var qty = parseInt(jQuery(this).closest('.product-buy-block').find('input[name=product_count]').val());
@@ -40,9 +40,17 @@ function beeCartInit(){
                         BeeCartAppObjects.cartBlockApp.ELEMENTS_IDS.push(data.ELEMENTS[i].ID);
                     }
 
+                    console.log("succes product changer");
+
                     BeeCartAppObjects.cartBlockApp.recalcTotalPrice();
 
+                    console.log("after recalc callback");
+
                     BeeCartAppObjects.cartBlockApp.changeAddBtn();
+
+                    console.log("after change Add BTN");
+
+                    console.log(BeeCartAppObjects.cartBlockApp);
 
                 }
             }
@@ -253,7 +261,7 @@ function changeAddBtnByParams(id){
                     }
                 },
                 changeAddBtnHandler: function(id){
-
+                    
                     if (BeeCartAppObjects.changeAddToCartBtnText == "N" ||
                         BeeCartAppObjects.inCartBtnText.length == 0) return;
                     var btn = this.findBtnById(id);
@@ -261,7 +269,7 @@ function changeAddBtnByParams(id){
 
                     var params = {};
                     if (typeof BeeCartGetParams !== "undefined"){
-                        var params = BeeCartGetParams(btn);
+                        var params = BeeCartGetParams(btn); 
                     }
 
                     //console.log("try to change btn name");
@@ -279,7 +287,7 @@ function changeAddBtnByParams(id){
                     }
 
                 },
-
+                
                 disableBtn: function(ID, obj){
                     this.ELEMENTS_BTN_TEXTS[ID] = jQuery(obj).html();
                     jQuery(obj).html(BeeCartAppObjects.inCartBtnText);
@@ -329,10 +337,10 @@ function changeAddBtnByParams(id){
 
 // }
 // function botAskNewOrder(phoneNumber) {
-
+    
 // }
 // function moveToBotDialog(phoneNumber) {
-
+    
 // }
 
 // function beeCartOrdering(phoneNumber) {
