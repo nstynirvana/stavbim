@@ -8,7 +8,10 @@ $this->setFrameMode(true);
         } else {
             $name = $arSection["NAME"];
         } ?>
-        <h2 class="main-catalog__title"><?= $name ?></h2>
+        <a style="text-decoration: none;" href="<?= $arSection["SECTION_PAGE_URL"] ?>">
+        <h2  class="main-catalog__title"><?= $name ?></h2>
+        </a>
+        
         <div class="main-catalog__cards-block">
             <?
             $arChildFilter = array('IBLOCK_ID' => $arParams["IBLOCK_ID"], 'SECTION_ID' => $arSection["ID"]);
@@ -22,7 +25,7 @@ $this->setFrameMode(true);
                             <? $arFile_1 = CFile::GetFileArray($childSection["PICTURE"]); ?>
                             <? $arFile_2 = CFile::GetFileArray($childSection["DETAIL_PICTURE"]); ?>
                             <img src="<?= $arFile_1["SRC"] ?>" class="catalog__card-img-desc" alt="">
-                            <img src="<?= $arFile_1["SRC"] ?>" class="catalog__card-img-tablet" alt="">
+                            <img src="<?= $arFile_2["SRC"] ?>" class="catalog__card-img-tablet" alt="">
                         </div>
                         <div class="catalog__card-descr"><p><?= $childSection["NAME"] ?></p></div>
                     </a>

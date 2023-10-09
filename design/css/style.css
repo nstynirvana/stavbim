@@ -7,6 +7,91 @@
   position: relative;
 }
 
+.form-success {
+  background-color: #F8F8F8;
+  padding: 100px 0;
+}
+
+.container__form-success {
+  max-width: 1470px;
+  position: relative;
+  margin: 60px auto 100px;
+}
+
+.form-success__message {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-success__message_img {
+  width: 45px;
+  margin-bottom: 20px;
+}
+
+.form-success__message_title {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 44px;
+  color: #000000;
+  margin-bottom: 10px;
+  height: 44px;
+}
+
+.form-success__message_clue {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.2px;
+}
+.form-success__path {
+  margin: 60px auto 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.form-success__path_clue {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #818181;
+}
+
+.form-success__path_button {
+  background-color: #29A9EB;
+  border: none;
+  padding: 10.5px 118px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.form-success__path_button-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  margin-right: 10px;
+}
+.form-success__path_button-img {
+  width: 23px;
+}
+
+.catalog-cards-block-item-wrapper .product-buy-link_in-cart{
+  cursor: not-allowed;
+  opacity: 0.7;
+  background: #038B1B;
+}
+
+.myworks__block__slider__item-wrapper .product-buy-link_in-cart {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background: #038B1B;
+}
+
+.yousee__slider__item-wrapper .product-buy-link_in-cart {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background: #038B1B;
+}
 .slick-dots>li:only-child {
   display: none;
 }
@@ -317,6 +402,7 @@
   justify-content: space-between;
   padding-right: 21px;
   margin-top: 15px;
+  margin-bottom: 30px;
 }
 .basket__pay__title {
   font-weight: 500;
@@ -624,7 +710,7 @@
 .basket__pay__choice__form__wallet-number:active, .basket__pay__choice__form__wallet-number:focus {
   outline: none;
 }
-.basket__pay__btn {
+.basket__pay__btn__block .basket__pay__btn {
   margin-top: 40px;
   display: block;
   width: 100%;
@@ -804,6 +890,9 @@
 .catalog__card-img {
   margin: 0 auto;
   height: 169px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .catalog__card-img-desc {
   display: block;
@@ -2273,6 +2362,13 @@
   cursor: pointer;
   transition: 0.3s all;
 }
+
+.product-card__text .product-buy-link_in-cart {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background: #038B1B;
+}
+
 .product-card__text__btn:hover {
   background-color: #252525;
   transition: 0.3s all;
@@ -2573,6 +2669,12 @@
   color: #FFFFFF;
   cursor: pointer;
   transition: 0.3s all;
+}
+
+.similar__slider__item .product-buy-link_in-cart {
+    cursor: not-allowed;
+    opacity: 0.7;
+    background: #038B1B;
 }
 .similar__slider__item-text-btn:hover {
   background-color: #252525;
@@ -3541,7 +3643,7 @@
     font-size: 16px;
     line-height: 140;
   }
-  .basket__pay__btn {
+  .basket__pay__btn__block .basket__pay__btn {
     font-size: 14px;
     line-height: 16px;
     padding: 14.5px 0;
@@ -4142,6 +4244,7 @@
     font-size: 14px;
     line-height: 16px;
   }
+
   .product-card__text__wrapper {
     margin-top: 22px;
   }
@@ -6231,9 +6334,9 @@
     top: 50px;
   }
   .basket {
-    width: 100%;
+    width: 320px;
     border-radius: 0;
-    padding: 20px 5px 20px 15px;
+    padding: 20px 15px 20px 15px;
   }
   .basket__title {
     padding-right: 5px;
@@ -6278,6 +6381,7 @@
   .basket__pay {
     margin-top: 7px;
     padding-right: 10px;
+    margin-bottom: 20px;
   }
   .basket__pay__title {
     font-size: 16px;
@@ -6358,7 +6462,7 @@
     font-size: 14px;
     line-height: 140%;
   }
-  .basket__pay__btn {
+  .basket__pay__btn__block .basket__pay__btn {
     margin-top: 25px;
     height: 45px;
     font-size: 12px;
@@ -7065,6 +7169,7 @@
     font-size: 14px;
     line-height: 16px;
   }
+
   .product-card__text__vendor__item, .product-card__text__vendor__value, .product-card__text__manufacturer__item, .product-card__text__manufacturer__value, .product-card__text__version__item, .product-card__text__version__value, .product-card__text__smart__item, .product-card__text__smart__value, .product-card__text__category__item, .product-card__text__category__value, .product-card__text__number__item, .product-card__text__number__value, .product-card__text__title__item, .product-card__text__title__value, .product-card__text__link__item, .product-card__text__link__value {
     font-size: 10px;
     line-height: 11px;
@@ -7636,4 +7741,10 @@
   .catalog__card-descr {
     height: 42px;
   }
+}
+
+@media only screen and (max-width: 710px) {
+  .catalog__card-img-tablet {
+    max-width: 155px;
+}
 }

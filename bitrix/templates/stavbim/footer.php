@@ -2,7 +2,11 @@
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__list-container">
-                <div class="footer__logo-mobile"><img src="/design/img/footer_logo.svg" alt="StavBim"></div>
+                <div class="footer__logo-mobile">
+                    <a href="/">
+                        <img src="/design/img/footer_logo.svg" alt="StavBim">
+                    </a>
+                 </div>
                 <h4 class="footer__title">Меню сайта</h4>
                 <div class="footer__list__wrapper">
 
@@ -45,7 +49,11 @@
                     ); ?>
                 </div>
             </div>
-            <div class="footer__logo"><img src="/design/img/footer_logo.svg" alt="StavBim"></div>
+            <div class="footer__logo">
+                <a href="/">
+                    <img src="/design/img/footer_logo.svg" alt="StavBim">
+                </a>
+            </div>
         </div>
         <div class="footer__moreinfo">
             <div class="footer__copyright"><a href="/confidentiality/">Политика конфиденциальности</a></div>
@@ -64,9 +72,9 @@
     </div>
 </footer>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="/design/js/script.js"></script>
-<script src="/design/js/pvashooot.js"></script>
-<script type="text/javascript" src="http://oemar.googlecode.com/files/scroll-startstop.events.jquery.js"></script>
+<script src="/design/js/pvashooot.js?v=<?=rand()?>"></script>
 </body>
 </html>

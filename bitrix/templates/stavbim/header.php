@@ -69,18 +69,19 @@
 
                     <div id="basket" class="header__search-basket-btn">
                         <? $APPLICATION->IncludeComponent(
-                            "pvcart:cart",
-                            "cart_block_edited",
-                            array(
-                                "COMPONENT_TEMPLATE" => "cart_block",
-                                "BEE_VIEW_BLOCK_TOP" => "",
-                                "BEE_VIEW_ICON_COLOR" => "",
-                                "BEE_VIEW_COUNT_COLOR" => "",
-                                "BEE_VIEW_BTN_COLOR" => "",
-                                "BEE_VIEW_POSITION" => "RIGHT"
-                            ),
-                            false
-                        );?>
+	"pvcart:cart", 
+	"cart_block_edited", 
+	array(
+		"COMPONENT_TEMPLATE" => "cart_block_edited",
+		"BEE_VIEW_BLOCK_TOP" => "",
+		"BEE_VIEW_ICON_COLOR" => "",
+		"BEE_VIEW_COUNT_COLOR" => "",
+		"BEE_VIEW_BTN_COLOR" => "",
+		"BEE_VIEW_POSITION" => "RIGHT",
+		"BEE_VIEW_CATALOG_LINK" => ""
+	),
+	false
+);?>
                     </div>
 
                 </div>
@@ -120,142 +121,4 @@
     false
 ); ?>
 
-<!-- КОРЗИНА -->
 
-
-<!--
-<div class="basket">
-    <div class="basket__title">
-        <div class="basket__title__wrapper">
-            Корзина <span></span>
-        </div>
-    </div>
-    <div class="basket__list">
-        <div class="basket__list__scroll">
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-            <div class="basket__item">
-                <div class="basket__item__thing">
-                    <div class="basket__item__thing__icon"><img src="/design/icons/works_icon.svg" alt=""></div>
-                    <div class="basket__item__thing__descr">
-                        <div class="basket__item__thing__descr__title">Модель для проектирования</div>
-                        <div class="basket__item__thing__descr__price">500 ₽</div>
-                    </div>
-                </div>
-                <div class="basket__item__remove">&#10006;</div>
-            </div>
-        </div>
-    </div>
-    <div class="basket__pay">
-        <div class="basket__pay__title">Сумма заказа:</div>
-        <div class="basket__pay__sum">0 ₽</div>
-    </div>
-    <form action="" class="basket__pay__form">
-        <div class="basket__pay__form__name-phone">
-            <input placeholder="Имя" type="text" class="basket__pay__form__name">
-            <input placeholder="Номер телефона" type="text" class="basket__pay__form__phone">
-        </div>
-        <input placeholder="Электронная почта" type="text" class="basket__pay__form__mail">
-    </form>
-    <div class="basket__pay__choice">
-        <div class="basket__pay__choice__title">Способ оплаты</div>
-        <div class="basket__pay__choice__btn">
-            <div class="basket__pay__choice__btn-online">
-                <input type="radio" id="online" name="choice" value="online" checked>
-                <label for="online">Онлайн</label>
-            </div>
-            <div class="basket__pay__choice__btn-crypto">
-                <input type="radio" id="crypto" name="choice" value="crypto">
-                <label for="crypto">Криптовалюта</label>
-            </div>
-        </div>
-        <form action="" class="basket__pay__choice__form__online active">
-            <div class="basket__pay__choice__form__name-secondname">
-                <input placeholder="Имя" type="text" class="basket__pay__choice__form__name">
-                <input placeholder="Фамилия" type="text" class="basket__pay__choice__form__secondname">
-            </div>
-            <input placeholder="Номер карты" type="text" class="basket__pay__choice__form__card">
-            <div class="basket__pay__choice__form__card-info">
-                <input placeholder="Действует до " type="text" class="basket__pay__choice__form__card-time">
-                <input placeholder="CVV - код" type="text" class="basket__pay__choice__form__card-cvv">
-            </div>
-        </form>
-        <form action="" class="basket__pay__choice__form__crypto">
-            <input placeholder="Номер кошелька" type="text" class="basket__pay__choice__form__wallet-number">
-        </form>
-    </div>
-    <div class="basket__pay__btn__block">
-        <button class="basket__pay__btn">Купить</button>
-    </div>
-    <div class="basket__copyright"><p>Нажимая кнопку «Купить» вы соглашаетесь с <a href="/confidentiality/">политикой конфиденциальности</a></p></div>
-</div>
--->
-<!-- КОРЗИНА -->

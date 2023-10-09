@@ -293,7 +293,7 @@ JCSmartFilter.prototype.values2post = function (values) {
 		} else {
 			var name = values[i].name.substring(0, p);
 			var rest = values[i].name.substring(p + 1);
-			if (!current[name])
+			if (!current[name])ага
 				current[name] = [];
 
 			var pp = rest.indexOf(']');

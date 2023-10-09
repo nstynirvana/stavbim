@@ -18,7 +18,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
 
-            <div class="item__catalog-cards-block-item ix-list-item">
+            <div id="content" class="item__catalog-cards-block-item ix-list-item">
 
                 <div class="catalog-cards-block-item-wrapper product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">

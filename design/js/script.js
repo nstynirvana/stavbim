@@ -1,5 +1,5 @@
-const searchPanel = document.querySelector('.search-panel'),
-    searchOpenBtn = document.querySelector('.header__search-basket-btn');
+const searchPanel = document.querySelector('.search-panel');
+const searchOpenBtn = document.querySelector('.header__search-basket-btn');
 
 const basketInputOnlinePay = document.querySelector('#online'),
     basketInputCryptoPay = document.querySelector('#crypto'),
@@ -64,15 +64,16 @@ window.addEventListener('DOMContentLoaded', () => {
             moreMenuList.classList.remove('active');
             moreMenuWrapper.classList.remove('active');
             mobileMenuWrapper.classList.remove('active');
+            
         }
     });
 
 
     //Basket
 
-    // basketOpenPopupBtn.addEventListener('click', () => {
-    //     basketPopup.classList.toggle('active');
-    //     if (basketPopup.classList.contains('active')) {
+    // $('#basket').addEventListener('click', () => {
+    //     $('.basket').classList.toggle('active');
+    //     if ($('.basket').classList.contains('active')) {
     //         searchPanel.classList.remove('active');
     //         mobileMenuBtn.classList.remove('active');
     //         mobileMenuContent.classList.remove('active');
@@ -81,22 +82,24 @@ window.addEventListener('DOMContentLoaded', () => {
     //         moreMenuList.classList.remove('active');
     //         moreMenuWrapper.classList.remove('active');
     //         mobileMenuWrapper.classList.remove('active');
+            
     //     }
     // });
 
+    
     // basketClosePopupBtn.addEventListener('click', () => {
     //     basketPopup.classList.remove('active');
     // });
 
-    /*basketInputOnlinePay.addEventListener('change', (e) => {
-        basketFormOnlinePay.classList.add('active');
-        basketFormCryptoPay.classList.remove('active');
-    });*/
+    // basketInputOnlinePay.addEventListener('change', (e) => {
+    //     basketFormOnlinePay.classList.add('active');
+    //     basketFormCryptoPay.classList.remove('active');
+    // });
 
-    /*basketInputCryptoPay.addEventListener('change', (e) => {
-        basketFormOnlinePay.classList.remove('active');
-        basketFormCryptoPay.classList.add('active');
-    });*/
+    // basketInputCryptoPay.addEventListener('change', (e) => {
+    //     basketFormOnlinePay.classList.remove('active');
+    //     basketFormCryptoPay.classList.add('active');
+    // });
 
     // basketPopupItem.forEach((item, index) => {
     //     const removeBlockBtn = document.querySelectorAll('.basket__item__remove');
@@ -108,21 +111,21 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // function countPrice() {
     //     const result = [];
-    //
+    
     //     let sum = 0;
-    //
+    
     //     document.querySelectorAll('.basket__item__thing__descr__price').forEach(item => {
     //         const digits = item.innerHTML.match(/\d+/g).join('');
     //         result.push(+digits);
     //     });
-    //
+    
     //     for (let i = 0; i < result.length; i++) {
     //         sum += result[i];
     //     }
-    //
+    
     //     basketPrice.textContent = `${sum} ₽`;
     // }
-    //
+    
     // countPrice();
 
     //mobile menu
@@ -210,8 +213,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function sendQueryAction(strToSend, URL, action, method) {
 
-        console.log("Нет я");
-
         $.ajax({
             url: location.href, //Адрес подгружаемой страницы
             type: method, //Тип запроса
@@ -220,10 +221,6 @@ window.addEventListener('DOMContentLoaded', () => {
             success: function (response) { //Если все нормально
 
                 var resultElements = $(response).find(".block__sort").get(0);
-
-
-                console.log("а может и я");
-
 
                 $(".block__sort").replaceWith(resultElements);
 

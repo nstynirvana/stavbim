@@ -9,6 +9,7 @@ if (window.frameCacheVars !== undefined)
     });
 }
 
+
 function beeCartInit(){
     if (typeof BeeCartAppObjects.cartPageApp == "undefined")
         jQuery(BeeCartAppObjects.cartBlockApp.$el).show();
@@ -39,17 +40,9 @@ function beeCartInit(){
                         BeeCartAppObjects.cartBlockApp.ELEMENTS_IDS.push(data.ELEMENTS[i].ID);
                     }
 
-                    console.log("succes product changer");
-
                     BeeCartAppObjects.cartBlockApp.recalcTotalPrice();
 
-                    console.log("after recalc callback");
-
                     BeeCartAppObjects.cartBlockApp.changeAddBtn();
-
-                    console.log("after change Add BTN");
-
-                    console.log(BeeCartAppObjects.cartBlockApp);
 
                 }
             }
@@ -115,6 +108,7 @@ function changeAddBtnByParams(id){
     if (window.BeeCartAppObject)
         return;
 
+
     window.BeeCartAppObject = function (arParams) {
         switch (arParams.type) {
             case 'page':
@@ -143,13 +137,18 @@ function changeAddBtnByParams(id){
                 showCartBlock: function (show) {
                     if (show === true) {
                         jQuery(this.$el).addClass('bc-cart-w-visible');
+                        jQuery(this.$el).find(".basket").addClass("active");
                         return;
                     }
                     if (jQuery(this.$el).hasClass('bc-cart-w-visible')) {
                         jQuery(this.$el).removeClass('bc-cart-w-visible');
+                        jQuery(this.$el).find(".basket").removeClass("active");
+
                     } else {
                         jQuery(this.$el).addClass('bc-cart-w-visible');
+                        jQuery(this.$el).find(".basket").addClass("active");
                     }
+
                 },
                 changeItemCount: function (id, qty, $event) {
 
@@ -250,23 +249,20 @@ function changeAddBtnByParams(id){
                         var ID = jQuery(elements[i]).attr("data-id");
                         if (this.ELEMENTS_IDS.indexOf(ID) != -1) {
                             this.changeAddBtnHandler(ID);
-
-                            //console.log("try to change btn name");
-
                         }
                     }
                 },
                 changeAddBtnHandler: function(id){
+
                     if (BeeCartAppObjects.changeAddToCartBtnText == "N" ||
                         BeeCartAppObjects.inCartBtnText.length == 0) return;
                     var btn = this.findBtnById(id);
                     if (typeof btn == "undefined") return;
-                    if (typeof beeCartGetParams !== "undefined") {
-                        var params = beeCartGetParams(btn);
-                    }
 
-                    console.log(btn);
-                    console.log(params);
+                    var params = {};
+                    if (typeof BeeCartGetParams !== "undefined"){
+                        var params = BeeCartGetParams(btn);
+                    }
 
                     //console.log("try to change btn name");
 
@@ -281,7 +277,9 @@ function changeAddBtnByParams(id){
                             this.enableBtn(id, btn);
                         }
                     }
+
                 },
+
                 disableBtn: function(ID, obj){
                     this.ELEMENTS_BTN_TEXTS[ID] = jQuery(obj).html();
                     jQuery(obj).html(BeeCartAppObjects.inCartBtnText);
@@ -326,3 +324,21 @@ function changeAddBtnByParams(id){
         });
     }
 })(window)
+
+// function checkDialogExistence(phoneNumber) {
+
+// }
+// function botAskNewOrder(phoneNumber) {
+
+// }
+// function moveToBotDialog(phoneNumber) {
+
+// }
+
+// function beeCartOrdering(phoneNumber) {
+//     if (checkDialogExistence(phoneNumber)) {
+//       botAskNewOrder(phoneNumber);
+//     } else {
+//       moveToBotDialog(phoneNumber);
+//     }
+//   }

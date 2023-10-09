@@ -37,8 +37,8 @@ $this->addExternalCss($templateFolder . "/css/media.css");
                         <div class='bc-cart-page-w-content-tbl-w'>
                             <div class='bc-cart-page-w-content-item' v-for="(item, index) in ELEMENTS">
                                 <div class='bc-cart-page-w-content-item-body bc-cart-page-w-content-item-body-1'>
-                                    <div class='bc-cart-page-w-content-item-image' v-if="item.IMAGE.src">
-                                        <img :src="item.IMAGE.src"/>
+                                    <div class='bc-cart-page-w-content-item-image' v-if="item.PICTURES.src">
+                                        <img :src="item.PICTURES.src"/>
                                     </div>
                                     <div class="bc-cart-page-w-content-item-detail">
                                         <div class='bc-cart-page-w-content-name'>

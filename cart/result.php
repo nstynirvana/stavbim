@@ -41,3 +41,5 @@ if (Loader::includeModule("pvgroup.cart")) {
 // success
     CBeeOrder::updateOrder($inv_id, array("PAYED" => "Y"));
 }
+?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

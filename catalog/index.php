@@ -7,10 +7,10 @@ $APPLICATION->SetTitle("Каталог");
 
 <main class="main catalog-page-header-custome">
 
-    <div class="container">
+    <div id="content" class="container">
 
         <? include($_SERVER['DOCUMENT_ROOT'] . "/include/template/page-title.php"); ?>
-
+        
         <?$APPLICATION->IncludeComponent(
             "bitrix:catalog.section.list",
             "main-catalog",

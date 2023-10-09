@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="c54fef06-9d69-42af-9b3a-201a4b0bf844" name="back-stavbim.webtm.ru" url="http://stavbim2.webtm.ru/">
-        <fileTransfer rootFolder="/home/d/dapsite/stavbim2/public_html/" accessType="SFTP" host="92.53.96.150" port="22" sshConfigId="bf17cee8-6d2c-42d8-b991-1f1a96ec95ad" sshConfig="dapsite@92.53.96.150:22 password">
+      <webServer id="c54fef06-9d69-42af-9b3a-201a4b0bf844" name="back-stavbim.webtm.ru" url="https://stavbim.ru/">
+        <fileTransfer rootFolder="/home/s/stavbim/stavbim.ru/public_html" accessType="SFTP" host="185.114.247.232" port="22" sshConfigId="5fcb4c5f-c6e2-4fda-8da3-4146d55140cc" sshConfig="stavbim@185.114.247.232:22 password">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>

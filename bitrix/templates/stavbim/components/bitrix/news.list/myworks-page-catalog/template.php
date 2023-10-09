@@ -17,7 +17,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
 ?>
 <?//dp($arResult)?>
 <? $worksCounter = 1; ?>
-    <div class="myworks__block__slider__inner ix-list-block">
+    <div id="content" class="myworks__block__slider__inner ix-list-block">
 
 <? foreach ($arResult['ITEMS'] as $arItem): ?>
 
@@ -36,7 +36,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
     <? endif; ?>
 
     <div class="myworks__block__slider__item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-        <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="myworks__block__slider__item-img">
+        <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="myworks__block__slider__item-img">
             <? $arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
             <? $arFile_2 = CFile::GetFileArray($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]); ?>
             <img src="<?= $arFile_1["SRC"] ?>" class="myworks__block__slider__item-img-main" alt="">
@@ -47,7 +47,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
             <div class="myworks__block__slider__item-text-descr"><?= $arItem["NAME"] ?></div>
             <div class="myworks__block__slider__item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
         </a>
-        <button class="similar__slider__item-text-btn">Добавить в корзину</button>
+        <button class="similar__slider__item-text-btn add2Cart product-buy-link" data-id="<?=$arItem["ID"]?>" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
     </div>
     </div>
     <? $worksCounter++ ?>

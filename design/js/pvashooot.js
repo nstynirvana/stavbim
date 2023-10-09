@@ -11,8 +11,6 @@ $(function () {
 
     var ListLoader = function (wrap, url, append) {
 
-        console.log("this");
-
         var listBlock = wrap.find('.ix-list-block');
         var navBlock = wrap.find('.ix-nav-block');
 
@@ -35,8 +33,6 @@ $(function () {
 
                 url = url.replace(/&?PAGEN_1=\d+/g, '');
 
-                console.log(url);
-
             }
 
             window.history.pushState({
@@ -50,8 +46,6 @@ $(function () {
         } else {
             url += '?'
         }
-
-        console.log(url);
 
         var req = $.ajax({
             url: url + 'ajax=Y',
@@ -140,3 +134,22 @@ $(window).scroll(function(){
     }
 
 });
+
+$(function() {
+    let header = $('.header');
+    let headerHeight = header.height(); // вычисляем высоту шапки
+    $(window).scroll(function() {
+      var currentWindowScroll = $(window).scrollTop();
+      if(currentWindowScroll > 1) {
+       header.addClass('header_fixed');
+       $('body').css({
+          'paddingTop': headerHeight+'px' // делаем отступ у body, равный высоте шапки
+       });
+      } else {
+       header.removeClass('header_fixed');
+       $('body').css({
+        'paddingTop': 0 // удаляю отступ у body, равный высоте шапки
+       })
+      }
+    });
+   });

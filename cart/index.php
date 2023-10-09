@@ -13,9 +13,9 @@ $APPLICATION->SetTitle("Корзина");
 		"BEE_VIEW_POSITION" => "LEFT"
 	)
 );?><?$APPLICATION->IncludeComponent(
-	"pvcart:cart.form",
-	"",
-	Array(
+	"pvcart:cart.form", 
+	".default", 
+	array(
 		"AJAX_MODE" => "Y",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
@@ -23,6 +23,9 @@ $APPLICATION->SetTitle("Корзина");
 		"AJAX_OPTION_STYLE" => "N",
 		"PERSONAL_AGREE" => "Y",
 		"PERSONAL_AGREE_LINK" => "processing-cart/",
-		"USE_PHONE_MASK" => "Y"
-	)
+		"USE_PHONE_MASK" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
+		"SHOW_DELIVERY_SERVICES" => "not_show"
+	),
+	false
 );?><br><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

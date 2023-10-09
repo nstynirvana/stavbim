@@ -1,3 +1,48 @@
+.basket__container {
+    max-width: 535px;
+    height: 45px;
+    border: 1px solid #1A1A1A;
+    border-radius: 2px;
+    padding: 13px 91px;
+    margin-right: 21px;
+}
+.basket__all-item__remove {
+    cursor: pointer;
+    transition: 0.3s all;    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.38px;
+    color: #1A1A1A;
+    text-align: center;
+}
+
+.header_fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  
+.basket__pay_warning {
+    margin-top: 40px;
+display: flex;
+}
+
+.basket__pay_warning_img {
+ width: 24px;
+ margin-right: 10px;
+}
+
+.basket__pay_warning_text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16.09px;
+    color: #1A1A1A;
+    margin-top: 2.5px;
+}
+                        
+                        
 .tooltip-block{
     position: absolute;
     background: white;
@@ -223,6 +268,27 @@
         width: 100%;
     }
 
+    .basket__pay_warning_text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .basket__container {
+        padding: 13px 0;
+        margin-right: 0;
+    }
+    .basket__all-item__remove {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .basket__pay__btn__block {
+        padding-right: 0;
+    }
+
+    .works__card {
+       width: auto; 
+    }
 }
 
 .ix-show-more-btn{

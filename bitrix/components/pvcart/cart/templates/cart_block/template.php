@@ -43,6 +43,7 @@ $arResult["CURRENCY"] = '&#x20bd;';
 
 
                 </div>
+                
                 <div class="bc-cart-w-btn-show-cart-count__close">
                     <svg height="100%" width="100%" id="close" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                          style="

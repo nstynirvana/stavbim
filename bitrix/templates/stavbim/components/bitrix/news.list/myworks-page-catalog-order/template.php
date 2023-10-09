@@ -28,7 +28,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
 
 <? $worksCounter = 1; ?>
 <div class="yousee__slider__item">
-    <div class="yousee__slider__inner ix-list-block">
+    <div id="content" class="yousee__slider__inner ix-list-block">
 <? foreach ($arResult['ITEMS'] as $arItem): ?>
 
 <?
@@ -46,7 +46,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
         <? endif; ?>
 
         <div class="yousee__slider__item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
-            <a href="<?= $arItem["LINK_PRODUCT"] ?>" class="yousee__slider__item-img">
+            <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="yousee__slider__item-img">
                 <? $arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
                 <img src="<?= $arFile_1["SRC"] ?>" alt="">
             </a>
@@ -56,7 +56,7 @@ $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayB
                 <div class="yousee__slider__item-text-descr"><?= $arItem["NAME"] ?></div>
                 <div class="yousee__slider__item-text-price"><?=number_format($arItem["PROPERTIES"]["PRICE"]["VALUE"], 0, ',', ' ')?> ₽</div>
             </a>
-            <button class="similar__slider__item-text-btn">Добавить в корзину</button>
+            <button class="similar__slider__item-text-btn add2Cart product-buy-link" data-id="<?=$arItem["ID"]?>" data-itemid="<?=$arItem["ID"]?>" data-price="<?=$arItem["PROPERTIES"]["PRICE"]["VALUE"]?>">Добавить в корзину</button>
         </div>
     </div>
     <? $worksCounter++ ?>

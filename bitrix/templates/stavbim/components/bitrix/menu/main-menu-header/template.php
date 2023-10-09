@@ -15,7 +15,7 @@
                 <li class="header__list-item link-more"><a class="header__link">Eщё</a></li>
             </ul>
             <div class="droplist__wrapper">
-                <div class="container">
+                <div id="content" class="container">
                     <div class="droplist">
                         <ul class="droplist__list">
         <?endif;?>
