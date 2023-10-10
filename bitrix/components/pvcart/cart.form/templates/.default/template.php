@@ -68,27 +68,36 @@ $formId = "bee-form-w";
     function checkForm(event, url) {
         var form = document.querySelector('form'); // Получение формы
 
-        // Проверка, что все поля формы заполнены
-        if (form.checkValidity()) {
+        var isValid = true;
+        var inputs = form.querySelectorAll('input[required]');
+        for (var i = 0; i < inputs.length; i++) {
+            if (inputs[i].value.trim() === '') {
+                isValid = false;
+                inputs[i].classList.add('error');
+            } else {
+                inputs[i].classList.remove('error');
+            }
+        }
+
+        if (isValid) {
             opennewtab(url); // Вызов функции только если форма заполнена
         } else {
             event.preventDefault(); // Отмена отправки формы, если поля не заполнены
         }
     }
 
+
     function opennewtab(url) {
         var win = window.open(url, '_blank');
     }
-</script>
-        <script>
             $(function() {
                 //Использование параметра completed
                 $("#PHONE").mask("+7 (999) 999-99-99");
             });
-        </script>
-        <script>
-            BeeCartAppObjects.formId = '<?= $formId ?>';
-        </script>
+
+    BeeCartAppObjects.formId = '<?= $formId ?>';
+
+</script>
     <?
     }
 

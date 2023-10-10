@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Каталог", 
-		"", 
+		"/catalog/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -37,24 +37,24 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Заказать разработку семейства", 
-		"", 
+		"/order/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Заказать разработку семейства", 
-		"", 
+		"/order/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Заказать разработку семейства", 
-		"", 
+		"/order/", 
 		Array(), 
 		Array(), 
 		"" 
-	),
+	)
 );
 ?>

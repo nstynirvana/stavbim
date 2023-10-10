@@ -74,7 +74,7 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="/design/js/script.js"></script>
+<script src="/design/js/script.js" defer></script>
 <script src="/design/js/pvashooot.js?v=<?=rand()?>"></script>
 </body>
 </html>

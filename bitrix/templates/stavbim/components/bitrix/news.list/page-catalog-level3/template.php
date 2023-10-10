@@ -7,7 +7,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
 
 <div class="catalog-cards-block-container-with-nav">
 
-    <div class="catalog-cards-block ix-list-block">
+    <div id="content" class="catalog-cards-block ix-list-block">
 
         <? foreach ($arResult['ITEMS'] as $arItem): ?>
 
@@ -18,13 +18,13 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
             $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
             ?>
 
-            <div id="content" class="item__catalog-cards-block-item ix-list-item">
+            <div  class="item__catalog-cards-block-item ix-list-item">
 
                 <div class="catalog-cards-block-item-wrapper product-buy-block" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
                     <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
                         <? $arFile = CFile::GetFileArray(($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0])); ?>
                         <img src="<?= $arFile["SRC"] ?>" alt="">
-                        <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
+                        <?if(!empty($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"])):?>
                             <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
                         <?endif;?>
                     </a>

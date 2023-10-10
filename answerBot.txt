@@ -1,0 +1,505 @@
+Array
+(
+    [MY_WORK] => Array
+        (
+            [ID] => 27
+            [TIMESTAMP_X] => 2023-09-09 13:45:28
+            [IBLOCK_ID] => 5
+            [NAME] => Моя работа
+            [ACTIVE] => Y
+            [SORT] => 1
+            [CODE] => MY_WORK
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => L
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => C
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 804
+            [VALUE] => Y
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => Y
+            [VALUE_XML_ID] => e28004685d19dfa60abd0eb566471eb2
+            [VALUE_SORT] => 500
+            [VALUE_ENUM_ID] => 17
+            [~VALUE] => Y
+            [~DESCRIPTION] => 
+            [~NAME] => Моя работа
+            [~DEFAULT_VALUE] => 
+        )
+
+    [PRICE] => Array
+        (
+            [ID] => 17
+            [TIMESTAMP_X] => 2023-09-09 13:45:28
+            [IBLOCK_ID] => 5
+            [NAME] => Стоимость
+            [ACTIVE] => Y
+            [SORT] => 2
+            [CODE] => PRICE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => N
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 260
+            [VALUE] => 12500
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 12500
+            [~DESCRIPTION] => 
+            [~NAME] => Стоимость
+            [~DEFAULT_VALUE] => 
+        )
+
+    [MY_WORK_EXAMPLE] => Array
+        (
+            [ID] => 31
+            [TIMESTAMP_X] => 2023-09-13 10:37:03
+            [IBLOCK_ID] => 5
+            [NAME] => Выводить как пример моей работы
+            [ACTIVE] => Y
+            [SORT] => 3
+            [CODE] => MY_WORK_EXAMPLE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => L
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => C
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => 
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 805
+            [VALUE] => Y
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => Y
+            [VALUE_XML_ID] => 4a603dfe376c7dc3559e51881618df97
+            [VALUE_SORT] => 500
+            [VALUE_ENUM_ID] => 18
+            [~VALUE] => Y
+            [~DESCRIPTION] => 
+            [~NAME] => Выводить как пример моей работы
+            [~DEFAULT_VALUE] => 
+        )
+
+    [VENDOR_CODE] => Array
+        (
+            [ID] => 20
+            [TIMESTAMP_X] => 2023-09-09 13:30:54
+            [IBLOCK_ID] => 5
+            [NAME] => Артикул
+            [ACTIVE] => Y
+            [SORT] => 5
+            [CODE] => VENDOR_CODE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => N
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 
+            [VALUE] => 
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 
+            [~DESCRIPTION] => 
+            [~NAME] => Артикул
+            [~DEFAULT_VALUE] => 
+        )
+
+    [BRAND] => Array
+        (
+            [ID] => 26
+            [TIMESTAMP_X] => 2023-09-09 13:30:54
+            [IBLOCK_ID] => 5
+            [NAME] => Бренд
+            [ACTIVE] => Y
+            [SORT] => 10
+            [CODE] => BRAND
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => E
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 6
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 610
+            [VALUE] => 136
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 136
+            [~DESCRIPTION] => 
+            [~NAME] => Бренд
+            [~DEFAULT_VALUE] => 
+        )
+
+    [OMNI_NUMBER] => Array
+        (
+            [ID] => 21
+            [TIMESTAMP_X] => 2023-09-09 13:30:54
+            [IBLOCK_ID] => 5
+            [NAME] => Номер OmniClass
+            [ACTIVE] => Y
+            [SORT] => 100
+            [CODE] => OMNI_NUMBER
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => N
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 
+            [VALUE] => 
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 
+            [~DESCRIPTION] => 
+            [~NAME] => Номер OmniClass
+            [~DEFAULT_VALUE] => 
+        )
+
+    [OMNI_TITLE] => Array
+        (
+            [ID] => 22
+            [TIMESTAMP_X] => 2023-09-09 13:30:54
+            [IBLOCK_ID] => 5
+            [NAME] => Заголовок OmniClass
+            [ACTIVE] => Y
+            [SORT] => 110
+            [CODE] => OMNI_TITLE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => S
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 
+            [VALUE] => 
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 
+            [~DESCRIPTION] => 
+            [~NAME] => Заголовок OmniClass
+            [~DEFAULT_VALUE] => 
+        )
+
+    [REVIT_VERSION] => Array
+        (
+            [ID] => 19
+            [TIMESTAMP_X] => 2023-09-09 13:45:10
+            [IBLOCK_ID] => 5
+            [NAME] => Версия Revit
+            [ACTIVE] => Y
+            [SORT] => 130
+            [CODE] => REVIT_VERSION
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => S
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 609
+            [VALUE] => 2022
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 2022
+            [~DESCRIPTION] => 
+            [~NAME] => Версия Revit
+            [~DEFAULT_VALUE] => 
+        )
+
+    [PICTURES] => Array
+        (
+            [ID] => 29
+            [TIMESTAMP_X] => 2023-09-09 13:30:54
+            [IBLOCK_ID] => 5
+            [NAME] => Изображения
+            [ACTIVE] => Y
+            [SORT] => 230
+            [CODE] => PICTURES
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => F
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => Y
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => Array
+                (
+                    [0] => 763
+                )
+
+            [VALUE] => Array
+                (
+                    [0] => 262
+                )
+
+            [DESCRIPTION] => Array
+                (
+                    [0] => 
+                )
+
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => Array
+                (
+                    [0] => 262
+                )
+
+            [~DESCRIPTION] => Array
+                (
+                    [0] => 
+                )
+
+            [~NAME] => Изображения
+            [~DEFAULT_VALUE] => 
+        )
+
+    [PDF_FILE] => Array
+        (
+            [ID] => 28
+            [TIMESTAMP_X] => 2023-09-12 16:12:42
+            [IBLOCK_ID] => 5
+            [NAME] => Загрузить файл (PDF)
+            [ACTIVE] => Y
+            [SORT] => 240
+            [CODE] => PDF_FILE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => F
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 695
+            [VALUE] => 292
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 292
+            [~DESCRIPTION] => 
+            [~NAME] => Загрузить файл (PDF)
+            [~DEFAULT_VALUE] => 
+        )
+
+    [STIRPS_FILE] => Array
+        (
+            [ID] => 32
+            [TIMESTAMP_X] => 2023-09-12 16:21:28
+            [IBLOCK_ID] => 5
+            [NAME] => Загрузить файл семейства
+            [ACTIVE] => Y
+            [SORT] => 260
+            [CODE] => STIRPS_FILE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => F
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => N
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 
+            [VALUE] => 
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 
+            [~DESCRIPTION] => 
+            [~NAME] => Загрузить файл семейства
+            [~DEFAULT_VALUE] => 
+        )
+
+    [TYPE_SIZE] => Array
+        (
+            [ID] => 24
+            [TIMESTAMP_X] => 2023-09-09 13:30:54
+            [IBLOCK_ID] => 5
+            [NAME] => Типоразмеры
+            [ACTIVE] => Y
+            [SORT] => 300
+            [CODE] => TYPE_SIZE
+            [DEFAULT_VALUE] => 
+            [PROPERTY_TYPE] => S
+            [ROW_COUNT] => 1
+            [COL_COUNT] => 30
+            [LIST_TYPE] => L
+            [MULTIPLE] => Y
+            [XML_ID] => 
+            [FILE_TYPE] => 
+            [MULTIPLE_CNT] => 5
+            [TMP_ID] => 
+            [LINK_IBLOCK_ID] => 0
+            [WITH_DESCRIPTION] => N
+            [SEARCHABLE] => N
+            [FILTRABLE] => N
+            [IS_REQUIRED] => N
+            [VERSION] => 1
+            [USER_TYPE] => 
+            [USER_TYPE_SETTINGS] => a:0:{}
+            [HINT] => 
+            [PROPERTY_VALUE_ID] => 
+            [VALUE] => 
+            [DESCRIPTION] => 
+            [VALUE_ENUM] => 
+            [VALUE_XML_ID] => 
+            [VALUE_SORT] => 
+            [~VALUE] => 
+            [~DESCRIPTION] => 
+            [~NAME] => Типоразмеры
+            [~DEFAULT_VALUE] => 
+        )
+
+)

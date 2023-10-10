@@ -24,7 +24,6 @@ function beeCartInit(){
         if (typeof beeCartGetParams !== "undefined")
             params = beeCartGetParams(btn);
 
-        console.log(params);
 
         qty = !isNaN(qty) && qty > 0 ? qty : 1;
         jQuery.ajax({
@@ -40,17 +39,9 @@ function beeCartInit(){
                         BeeCartAppObjects.cartBlockApp.ELEMENTS_IDS.push(data.ELEMENTS[i].ID);
                     }
 
-                    console.log("succes product changer");
-
                     BeeCartAppObjects.cartBlockApp.recalcTotalPrice();
 
-                    console.log("after recalc callback");
-
                     BeeCartAppObjects.cartBlockApp.changeAddBtn();
-
-                    console.log("after change Add BTN");
-
-                    console.log(BeeCartAppObjects.cartBlockApp);
 
                 }
             }
@@ -143,6 +134,7 @@ function changeAddBtnByParams(id){
             data: BeeCartAppObjects,
             methods: {
                 showCartBlock: function (show) {
+                    console.log(this.$el)
                     if (show === true) {
                         jQuery(this.$el).addClass('bc-cart-w-visible');
                         jQuery(this.$el).find(".basket").addClass("active");
@@ -151,7 +143,8 @@ function changeAddBtnByParams(id){
                     if (jQuery(this.$el).hasClass('bc-cart-w-visible')) {
                         jQuery(this.$el).removeClass('bc-cart-w-visible');
                         jQuery(this.$el).find(".basket").removeClass("active");
-
+                        // jQuery(this.$el).find('.basket__title__wrapper-span').removeClass('bc-cart-w-visible');
+                        // jQuery(this.$el).find('.basket__title__wrapper-span').find(".basket").removeClass("active");
                     } else {
                         jQuery(this.$el).addClass('bc-cart-w-visible');
                         jQuery(this.$el).find(".basket").addClass("active");
@@ -332,21 +325,3 @@ function changeAddBtnByParams(id){
         });
     }
 })(window)
-
-// function checkDialogExistence(phoneNumber) {
-
-// }
-// function botAskNewOrder(phoneNumber) {
-    
-// }
-// function moveToBotDialog(phoneNumber) {
-    
-// }
-
-// function beeCartOrdering(phoneNumber) {
-//     if (checkDialogExistence(phoneNumber)) {
-//       botAskNewOrder(phoneNumber);
-//     } else {
-//       moveToBotDialog(phoneNumber);
-//     }
-//   }

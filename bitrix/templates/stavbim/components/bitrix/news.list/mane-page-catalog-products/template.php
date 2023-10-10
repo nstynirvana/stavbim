@@ -62,7 +62,7 @@ $this->setFrameMode(true);
                         <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="works__img-container">
                             <?$arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]);?>
                             <img src="<?=$arFile_1["SRC"]?>" class="works__img" alt="">
-                            <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
+                            <?if(!empty($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"])):?>
                                 <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
                             <?endif;?>
                         </a>

@@ -56,7 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
     searchOpenBtn.addEventListener('click', () => {
         searchPanel.classList.toggle('active');
         if (searchPanel.classList.contains('active')) {
-            basketPopup.classList.remove('active');
             mobileMenuBtn.classList.remove('active');
             mobileMenuContent.classList.remove('active');
             dropList.classList.remove('active');
@@ -137,7 +136,6 @@ window.addEventListener('DOMContentLoaded', () => {
         mobileMenuWrapper.classList.toggle('active');
         if (mobileMenuContent.classList.contains('active')) {
             searchPanel.classList.remove('active');
-            basketPopup.classList.remove('active');
             dropList.classList.remove('active');
             dropListBtn.classList.remove('active');
         }
@@ -377,7 +375,6 @@ window.addEventListener('DOMContentLoaded', () => {
         searchPanel.classList.remove('active');
         mobileMenuBtn.classList.remove('active');
         mobileMenuContent.classList.remove('active');
-        basketPopup.classList.remove('active');
     });
 
     document.addEventListener('click', (e) => {
@@ -387,7 +384,7 @@ window.addEventListener('DOMContentLoaded', () => {
             dropListBtn.classList.remove('active');
         }
     });
-    console.log(openMoreMenuBtn);
+
     openMoreMenuBtn.addEventListener('click', () => {
         moreMenuWrapper.classList.add('active');
         moreMenuList.classList.add('active');
@@ -414,3 +411,52 @@ $(document).ready(function(){
         $('.tooltip-block').hide();
     });
 });
+
+
+const button = document.querySelector('.product-buy-link');
+function getContentFromPage() {
+    const popupContent = document.getElementById('comp_2abc38a46f65a6b8d81d135c1c703b02');
+    console.log('мы попали')
+    if (!popupContent.innerHTML) {
+        console.log('мы попали и сюда')
+        $.ajax({
+            url: '\n' + '/forma-dlya-korziny/',
+            success: function (data) {
+                console.log('мы попали и сюда тоже')
+                var content = $(data).find('#content-form').html();
+                console.log(content);
+                $('#comp_2abc38a46f65a6b8d81d135c1c703b02').html(content);
+            }
+        });
+    }
+}
+
+button.addEventListener('click', getContentFromPage, { once: true });
+
+// Получаем элементы с классами bc-cart-w и basket
+const bcCart = document.querySelector('.bc-cart-w');
+const basket = document.querySelector('.basket');
+
+// Получаем элементы с классами bc-cart-w-visible и active
+const bcCartVisible = document.querySelector('.bc-cart-w-visible');
+const basketActive = document.querySelector('.active');
+
+// Получаем элемент с классом basket__title__wrapper-span
+const basketTitleWrapper = document.querySelector('.basket__title__wrapper-span');
+
+// Функция для удаления классов
+const removeClasses = () => {
+    bcCart.classList.remove('bc-cart-w-visible');
+    basket.classList.remove('active');
+}
+
+// Проверяем, что все элементы с классами существуют
+if (bcCart && basket && bcCartVisible && basketActive && basketTitleWrapper) {
+    // Добавляем обработчик клика на элемент с классом basket__title__wrapper-span
+    basketTitleWrapper.addEventListener('click', () => {
+        // Проверяем условие наличия классов и выполняем удаление классов
+        if (bcCart.classList.contains('bc-cart-w-visible') && basket.classList.contains('active')) {
+            removeClasses();
+        }
+    });
+}

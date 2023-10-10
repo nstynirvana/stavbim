@@ -19,7 +19,7 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
                 <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="catalog-cards-block-item-img">
                     <? $arFile = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
                     <img src="<?= $arFile["SRC"] ?>" alt="">
-                    <?if($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]):?>
+                    <?if(!empty($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"])):?>
                         <img src="/design/icons/works_icon.svg" class="works__icon" alt="">
                     <?endif;?>
                 </a>

@@ -140,7 +140,7 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
 			}
 		}
 		this.popups = [];
-
+		console.log("Я споткнулся тут");
 		for (var PID in result.ITEMS) {
 			if (result.ITEMS.hasOwnProperty(PID)) {
 				this.updateItem(PID, result.ITEMS[PID]);
@@ -204,8 +204,17 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
 
 				if (this.viewMode == "VERTICAL") {
 					curProp = BX.findChild(BX.findParent(this.curFilterinput, {'class': 'bx-filter-parameters-box'}), {'class': 'bx-filter-container-modef'}, true, false);
-					curProp.appendChild(modef);
+					if (curProp && modef) {
+						curProp.appendChild(modef);
+					} else {
+						console.log('Ошибка: Невозможно добавить элемент');
+					}
 				}
+
+				// if (this.viewMode == "VERTICAL") {
+				// 	curProp = BX.findChild(BX.findParent(this.curFilterinput, {'class': 'bx-filter-parameters-box'}), {'class': 'bx-filter-container-modef'}, true, false);
+				// 	curProp.appendChild(modef);
+				// }
 
 				if (result.SEF_SET_FILTER_URL) {
 					this.bindUrlToButton('set_filter', result.SEF_SET_FILTER_URL);

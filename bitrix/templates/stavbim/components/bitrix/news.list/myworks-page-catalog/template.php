@@ -38,9 +38,10 @@ $pageN = "PAGEN_".$arResult['NAV_RESULT']->NavNum;
     <div class="myworks__block__slider__item-wrapper" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
         <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>" class="myworks__block__slider__item-img">
             <? $arFile_1 = CFile::GetFileArray($arItem["PROPERTIES"]["PICTURES"]["VALUE"][0]); ?>
-            <? $arFile_2 = CFile::GetFileArray($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"]); ?>
             <img src="<?= $arFile_1["SRC"] ?>" class="myworks__block__slider__item-img-main" alt="">
-            <img src="<?= $arFile_2["SRC"] ?>" class="myworks__block__slider__item-img-pdf" alt="">
+            <?if(!empty($arItem["PROPERTIES"]["PDF_FILE"]["VALUE"])):?>
+                <img src="/design/icons/works_icon.svg" class="myworks__block__slider__item-img-pdf" alt="">
+            <?endif;?>
         </a>
         <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>" class="myworks__block__slider__item-text">
             <div class="myworks__block__slider__item-text-title"><?=$arResult["SECTIONS_LIST"][$arItem["IBLOCK_SECTION_ID"]]?></div>

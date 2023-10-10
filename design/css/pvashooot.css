@@ -17,6 +17,14 @@
     text-align: center;
 }
 
+.error {
+    border-bottom: 1px solid red;
+}
+
+.error::placeholder {
+    color: red;
+}
+
 .header_fixed {
     position: fixed;
     left: 0;
@@ -288,6 +296,10 @@ display: flex;
 
     .works__card {
        width: auto; 
+    }
+
+    .brands__slide-img {
+        max-width: 120px;
     }
 }
 

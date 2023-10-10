@@ -1,0 +1,51 @@
+Array
+(
+    [message_id] => 2490
+    [from] => Array
+        (
+            [id] => 566824642
+            [is_bot] => 
+            [first_name] => Stepan
+            [last_name] => Simakov
+            [username] => stavstepan
+            [language_code] => ru
+        )
+
+    [chat] => Array
+        (
+            [id] => 566824642
+            [first_name] => Stepan
+            [last_name] => Simakov
+            [username] => stavstepan
+            [type] => private
+        )
+
+    [date] => 1696319764
+    [document] => Array
+        (
+            [file_name] => 3vd_92_parts_list.pdf
+            [mime_type] => application/pdf
+            [thumbnail] => Array
+                (
+                    [file_id] => AAMCAgADGQEAAgm6ZRvJExwG7ztG7NvMIcn0GOhM4McAAuA2AALd-OBI0cYbvvARUqsBAAdtAAMwBA
+                    [file_unique_id] => AQAD4DYAAt344Ehy
+                    [file_size] => 9445
+                    [width] => 320
+                    [height] => 253
+                )
+
+            [thumb] => Array
+                (
+                    [file_id] => AAMCAgADGQEAAgm6ZRvJExwG7ztG7NvMIcn0GOhM4McAAuA2AALd-OBI0cYbvvARUqsBAAdtAAMwBA
+                    [file_unique_id] => AQAD4DYAAt344Ehy
+                    [file_size] => 9445
+                    [width] => 320
+                    [height] => 253
+                )
+
+            [file_id] => BQACAgIAAxkBAAIJumUbyRMcBu87RuzbzCHJ9BjoTODHAALgNgAC3fjgSNHGG77wEVKrMAQ
+            [file_unique_id] => AgAD4DYAAt344Eg
+            [file_size] => 863478
+        )
+
+)
