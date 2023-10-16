@@ -80,11 +80,6 @@ $this->addExternalCss($templateFolder . "/css/media.css");
     </div>
 
     <div v-else class='cart-empty bc-cart-page-w-content-title bc-cart-page-w-content-title-empty'>
-        <script>
-            if (document.querySelector('.cart-empty__things')) {
-                $('.cart__title').css('display', 'none');
-            }
-        </script>
         <div class="cart-empty__things">
             <img class="cart-empty_img" src="/design/img/cart_empty.png">
             <h1 class="cart-empty_text">Ваша корзина пуста.</h1>

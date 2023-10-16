@@ -214,6 +214,7 @@ function changeAddBtnByParams(id){
                         data: {'method': 'removeAllItems', 'SITE_ID': BeeCartAppObjects.SITE_ID},
                         type: 'POST',
                         success: function (data) {
+                            // $('.cart__title').css('display', 'none');
                             if (data.STATUS) {
                                 app.ELEMENTS = [];
                                 app.enableAllBtn();

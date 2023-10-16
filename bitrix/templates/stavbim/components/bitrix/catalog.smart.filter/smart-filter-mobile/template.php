@@ -372,6 +372,7 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                                name="del_filter"
                                value="<?= GetMessage("CT_BCSF_DEL_FILTER") ?>"
                         />
+                        <? /*
                         <div class="bx-filter-popup-result <? if ($arParams["FILTER_VIEW_MODE"] == "VERTICAL") echo $arParams["POPUP_POSITION"] ?>"
                              id="modef" <? if (!isset($arResult["ELEMENT_COUNT"])) echo 'style="display:none"'; ?>
                              style="display: none;">
@@ -381,7 +382,7 @@ if (isset($templateData['TEMPLATE_THEME'])) {
                             <a style="display: none;" href="<? echo $arResult["FILTER_URL"] ?>"
                                target=""><? echo GetMessage("CT_BCSF_FILTER_SHOW") ?></a>
                         </div>
-
+                        */ ?>
                     </div>
                 </div>
             </div>

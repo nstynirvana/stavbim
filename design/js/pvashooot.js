@@ -102,7 +102,7 @@ $(function () {
 
 
     $(document)
-        .on('click','.ix-show-more-btn', function(){
+        .on('click', '.ix-show-more-btn', function () {
             var wrap = $(this).closest('.ix-cards-wrap');
             $(document).trigger('page:load', [wrap, $(this).data("url"), true]);
             return false;
@@ -113,7 +113,7 @@ $(function () {
 
 });
 
-$(window).scroll(function(){
+$(window).scroll(function () {
 
     //СКОЛЬКО УЖЕ ПРОКРУТИЛИ
     var currentWindowScroll = $(window).scrollTop();
@@ -125,31 +125,38 @@ $(window).scroll(function(){
     var innerHeight = $(window).innerHeight();
     //ОТСТУП
     var diff = 300;
-    //ГИГОУРОВНЕНИЕ
-    var optimalSideWidow = blockStart+blockHeight-diff-innerHeight;
+    //ГИГАУРОВНЕНИЕ
+    var optimalSideWidow = blockStart + blockHeight - diff - innerHeight;
 
     //ЖМИ НА КНОПКУ
-    if(currentWindowScroll > optimalSideWidow){
+    if (currentWindowScroll > optimalSideWidow) {
         $(".ix-show-more-btn").click();
     }
 
 });
 
-$(function() {
+$(function () {
     let header = $('.header');
+    let menu = $('.mobile__menu__wrapper');
+    let menuDop = $('.mobile__menu__more__wrapper');
     let headerHeight = header.height(); // вычисляем высоту шапки
-    $(window).scroll(function() {
-      var currentWindowScroll = $(window).scrollTop();
-      if(currentWindowScroll > 1) {
-       header.addClass('header_fixed');
-       $('body').css({
-          'paddingTop': headerHeight+'px' // делаем отступ у body, равный высоте шапки
-       });
-      } else {
-       header.removeClass('header_fixed');
-       $('body').css({
-        'paddingTop': 0 // удаляю отступ у body, равный высоте шапки
-       })
-      }
+    $(window).scroll(function (e) {
+        var currentWindowScroll = $(window).scrollTop();
+        e.preventDefault();
+        if (currentWindowScroll > 1) {
+            header.addClass('header_fixed');
+            menu.addClass('header_fixed');
+            menuDop.addClass('header_fixed');
+            $('html,body').css({
+                'paddingTop': headerHeight + 'px' // делаем отступ у body, равный высоте шапки
+            });
+        } else {
+            header.removeClass('header_fixed');
+            menu.removeClass('header_fixed');
+            menuDop.removeClass('header_fixed');
+            $('html,body').css({
+                'paddingTop': 0 // удаляю отступ у body, равный высоте шапки
+            })
+        }
     });
-   });
+});

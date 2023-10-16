@@ -65,25 +65,25 @@ if (!$arResult["SUCCESS_ORDER"]) {
                 </form>
         </div>
         <script>
-            // let callbackObject = { handleEvent: function(event){
-            //         var form = document.querySelector('form'); // Получение формы
-            //         var isValid = true;
-            //         var inputs = form.querySelectorAll('input[required]');
-            //         for (var i = 0; i < inputs.length; i++) {
-            //             if (inputs[i].value.trim() === '') {
-            //                 isValid = false;
-            //                 inputs[i].classList.add('error');
-            //             } else {
-            //                 inputs[i].classList.remove('error');
-            //             }
-            //         }
-            //         if (isValid) {
-            //             window.open('https://t.me/stavbim_bot/', '_blank');
-            //         } else {
-            //             event.preventDefault(); // Отмена отправки формы, если поля не заполнены
-            //         }
-            //     }
-            // }
+            let callbackObject = { handleEvent: function(event){
+                    var form = document.querySelector('form'); // Получение формы
+                    var isValid = true;
+                    var inputs = form.querySelectorAll('input[required]');
+                    for (var i = 0; i < inputs.length; i++) {
+                        if (inputs[i].value.trim() === '') {
+                            isValid = false;
+                            inputs[i].classList.add('error');
+                        } else {
+                            inputs[i].classList.remove('error');
+                        }
+                    }
+                    if (isValid) {
+                        window.open('https://t.me/stavbim_bot/', '_blank');
+                    } else {
+                        event.preventDefault(); // Отмена отправки формы, если поля не заполнены
+                    }
+                }
+            }
             function opennewtab(url) {
                 var win = window.open(url, '_blank');
             }
@@ -139,6 +139,10 @@ if (!$arResult["SUCCESS_ORDER"]) {
     </div>
 
     <script>
+        if (document.getElementById('comp_96044789c0705014c9d37bd2300f4e32')) {
+            document.getElementById('comp_96044789c0705014c9d37bd2300f4e32').style.width = '100%';
+        }
+
         function opennewtab(url) {
             var win = window.open(url, '_blank');
         }

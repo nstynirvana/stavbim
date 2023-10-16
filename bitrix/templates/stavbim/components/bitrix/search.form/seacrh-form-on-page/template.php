@@ -12,7 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);?>
 <form class="myworks__searchpanel" action="<?=$arResult["FORM_ACTION"]?>">
-	<?if($arParams["USE_SUGGEST"] === "Y"):?><?$APPLICATION->IncludeComponent(
+	<?if($arParams["USE_SUGGEST"] === "Y"):?>
+
+        <?$APPLICATION->IncludeComponent(
 				"bitrix:search.suggest.input",
 				"",
 				array(
@@ -22,7 +24,7 @@ $this->setFrameMode(true);?>
 					"DROPDOWN_SIZE" => 10,
 				),
 				$component, array("HIDE_ICONS" => "Y")
-	);?>
+	    );?>
 
     <?else:?>
         <input placeholder="Поиск" type="search" id="myworks__searchpanel__input" name="q">

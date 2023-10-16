@@ -9,6 +9,12 @@ $APPLICATION->SetTitle("Корзина");
         <h1 class="cart__title"><?$APPLICATION->ShowTitle(false)?></h1>
     </div>
 
+    <script>
+        if ($('body').find('.cart-empty__things')) {
+            $('.cart__title').css('display', 'none');
+        }
+    </script>
+
     <div id="content" class="container__form">
 
         <div class="container_cart">

@@ -9316,6 +9316,7 @@
     .myworks__block__slider__inner__item.big {
         padding: 15px 0;
         width: 100%;
+        margin: 0 15px;
     }
 
     .myworks__block {
@@ -9335,6 +9336,7 @@
     .myworks__block__slider__inner__item {
         padding: 15px 0;
         width: 100%;
+        margin: 0 15px;
     }
 
     .myworks__block__slider__item-wrapper {
