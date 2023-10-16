@@ -36,7 +36,8 @@ if (Loader::includeModule("pvgroup.cart") && !empty($_REQUEST["SignatureValue"])
     ?>
 
     <div class="robo-sucsess">
-        <p>Ваш платёж успешно проведён.</p><p>В ближайшее время с Вами свяжется наш менеджер.</p>
+        <p>Ваш платёж успешно проведён.</p>
+        <p>В ближайшее время с Вами свяжется наш менеджер.</p>
     </div>
 
     <style>

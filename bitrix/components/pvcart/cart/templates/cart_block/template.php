@@ -43,7 +43,6 @@ $arResult["CURRENCY"] = '&#x20bd;';
 
 
                 </div>
-                
                 <div class="bc-cart-w-btn-show-cart-count__close">
                     <svg height="100%" width="100%" id="close" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                          style="
@@ -114,7 +113,7 @@ $arResult["CURRENCY"] = '&#x20bd;';
                                             <span class="bc-cart-w-content-attr-value">{{ item.STATUS }}</span>
                                         </div>
                                         <div class='bc-cart-w-content-attr-row bc-cart-w-content-attr-row--additional-params' v-if="item.PARAMS_STR">
-                                         
+
                                             <span class="additional-params-item" v-html="item.PARAMS_STR"></span>
                                         </div>
                                     </div>

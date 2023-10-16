@@ -136,18 +136,16 @@ function changeAddBtnByParams(id){
                 showCartBlock: function (show) {
                     console.log(this.$el)
                     if (show === true) {
-                        jQuery(this.$el).addClass('bc-cart-w-visible');
-                        jQuery(this.$el).find(".basket").addClass("active");
+                        // jQuery(this.$el).addClass('bc-cart-w-visible');
+                        // jQuery(this.$el).find(".basket").addClass("active");
                         return;
                     }
                     if (jQuery(this.$el).hasClass('bc-cart-w-visible')) {
-                        jQuery(this.$el).removeClass('bc-cart-w-visible');
-                        jQuery(this.$el).find(".basket").removeClass("active");
-                        // jQuery(this.$el).find('.basket__title__wrapper-span').removeClass('bc-cart-w-visible');
-                        // jQuery(this.$el).find('.basket__title__wrapper-span').find(".basket").removeClass("active");
+                        // jQuery(this.$el).removeClass('bc-cart-w-visible');
+                        // jQuery(this.$el).find(".basket").removeClass("active");
                     } else {
-                        jQuery(this.$el).addClass('bc-cart-w-visible');
-                        jQuery(this.$el).find(".basket").addClass("active");
+                        // jQuery(this.$el).addClass('bc-cart-w-visible');
+                        // jQuery(this.$el).find(".basket").addClass("active");
                     }
 
                 },

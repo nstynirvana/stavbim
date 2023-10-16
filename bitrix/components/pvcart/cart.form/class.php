@@ -212,6 +212,12 @@ class CartFormClass extends CBitrixComponent
                         if ($order["status"]) {
                             $arResult = array();
                             $arResult["SUCCESS_ORDER"] = true;
+                            if ($arResult["SUCCESS_ORDER"] = true)  { ?>
+                                <script>
+                                    $('.bc-cart-page-w').css('display', 'none');
+                                    $('.cart__title').css('display', 'none');
+                                </script>
+                            <? }
                             $arResult["ORDER"] = $order["ORDER"];
                             $arResult["ELEMENTS"] = array();
                             //clear fields

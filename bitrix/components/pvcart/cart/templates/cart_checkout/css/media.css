@@ -4,8 +4,6 @@
     }
 
     .bc-cart-page-w-content-item:first-child {
-        border-top: 1px solid #eee;
-        padding: 30px 20px 30px;
 
     }
 
@@ -66,7 +64,6 @@
 
     .bc-cart-page-w-content-price-w {
         position: relative;
-        font-size: 150%;
         -webkit-transform: none;
         -ms-transform: none;
         transform: none;
