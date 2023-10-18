@@ -43,4 +43,6 @@ $APPLICATION->SetTitle("Корзина");
         </div>
 
     </div>
+
+
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

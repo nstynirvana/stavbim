@@ -132,7 +132,7 @@ JCSmartFilter.prototype.postHandler = function (result, fromCache) {
 	var hrefFILTER, url, curProp;
 	var modef = BX('modef');
 	var modef_num = BX('modef_num');
-
+    console.log('я тут?')
 	if (!!result && !!result.ITEMS) {
 		for (var popupId in this.popups) {
 			if (this.popups.hasOwnProperty(popupId)) {

@@ -23,6 +23,7 @@
     position: relative;
     padding-top: 23px;
     margin-bottom: 110px;
+    min-height: calc(76vh - 335px);
 }
 
 .container__form-success {
@@ -4068,6 +4069,7 @@
 
     .container__form {
         max-width: 1310px;
+        min-height: calc(62vh - 310px);
     }
 
     .basket__list {
@@ -6614,8 +6616,14 @@
         align-items: start;
     }
 
+    .item__catalog__content-block-mobile-form {
+        width: 100%;
+    }
+
     .item__catalog__content-block-mobile-filter-main {
         height: auto;
+        display: flex;
+        justify-content: space-between;
     }
 
     .item__catalog__content-block-mobile-filter-main-btn {
