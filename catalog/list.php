@@ -265,6 +265,7 @@ endif;
                         <? $APPLICATION->IncludeComponent(
                             "bitrix:catalog.smart.filter",
                             "smart-filter",
+//                            ".default",
                             array(
                                 "CACHE_GROUPS" => "Y",
                                 "CACHE_TIME" => "36000000",

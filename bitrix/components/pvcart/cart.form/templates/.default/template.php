@@ -28,15 +28,22 @@ $formId = "bee-form-w";
 if (!$arResult["SUCCESS_ORDER"]) {
     if (count($arResult["ELEMENTS"]) > 0) {
         ?>
+
         <div id="<?= $formId ?>" class="container_form bee-form-w bee-form-w--inline">
 
-                <form class="bee-form" action="<?= POST_FORM_ACTION_URI ?>" method="POST" enctype="multipart/form-data">
+                <form class="bee-form" action="<?= POST_FORM_ACTION_URI ?>" method="POST" id="ordercall" enctype="multipart/form-data">
                     <?= bitrix_sessid_post() ?>
                     <div class="basket__pay__form__name-phone">
                         <? foreach ($arResult["FIELDS"] as $arField) {
                             switch ($arField["FORM_TYPE"]) {
                                 case "text": ?>
-                                    <input style="background-color: #F8F8F8" required id="<?= $arField["CODE"] ?>" class="basket__pay__form__name <?= $arField["CLASS"] ?>" placeholder="<?= Loc::getMessage('BEEHIVE_CART_FORM_FIELD_' . $arField["CODE"]) ?><?= ($arField["IS_REQUIRED"] == "Y") ? ' *' : '' ?>" type='text' name='<?= $arResult["FIELDS_CODE"] ?>[<?= $arField["CODE"] ?>]' value="<?= $arField["SUBMITTED_VALUE"] ?>">
+                                    <input
+                                           style="background-color: #F8F8F8" required id="<?= $arField["CODE"] ?>" class="basket__pay__form__name <?= $arField["CLASS"] ?>"
+                                           placeholder="<?= Loc::getMessage('BEEHIVE_CART_FORM_FIELD_' . $arField["CODE"]) ?><?= ($arField["IS_REQUIRED"] == "Y") ? ' *' : '' ?>"
+                                           type='text' name='<?= $arResult["FIELDS_CODE"] ?>[<?= $arField["CODE"] ?>]'
+                                           minlength="2"
+                                           maxlength="30"
+                                           value="<?= $arField["SUBMITTED_VALUE"] ?>">
 
                                     <?
                                     break;
@@ -49,7 +56,7 @@ if (!$arResult["SUCCESS_ORDER"]) {
                         <p class="basket__pay_warning_text">После оформления заказа вы будете перенаправлены на Telegram-бота</p>
                     </div>
                     <div class="basket__pay__btn__block bee-form-actions">
-                        <button class="basket__pay__btn button" type="submit" onclick="opennewtab('https://stavbim.ru/catalog/')" style="background-color: #F8F8F8; border: 1px solid #1A1A1A; color: #1A1A1A" name="submit">
+                        <button class="basket__pay__btn button" onclick="opennewtab('https://stavbim.ru/catalog/')" style="background-color: #F8F8F8; border: 1px solid #1A1A1A; color: #1A1A1A">
                             Продолжить покупки
                         </button>
                         <button id="buttonPay" class="basket__pay__btn button" type="submit" style="background-color: #1A1A1A;" name="submit">
@@ -65,25 +72,6 @@ if (!$arResult["SUCCESS_ORDER"]) {
                 </form>
         </div>
         <script>
-            let callbackObject = { handleEvent: function(event){
-                    var form = document.querySelector('form'); // Получение формы
-                    var isValid = true;
-                    var inputs = form.querySelectorAll('input[required]');
-                    for (var i = 0; i < inputs.length; i++) {
-                        if (inputs[i].value.trim() === '') {
-                            isValid = false;
-                            inputs[i].classList.add('error');
-                        } else {
-                            inputs[i].classList.remove('error');
-                        }
-                    }
-                    if (isValid) {
-                        window.open('https://t.me/stavbim_bot/', '_blank');
-                    } else {
-                        event.preventDefault(); // Отмена отправки формы, если поля не заполнены
-                    }
-                }
-            }
             function opennewtab(url) {
                 var win = window.open(url, '_blank');
             }
@@ -92,27 +80,37 @@ if (!$arResult["SUCCESS_ORDER"]) {
                 $("#PHONE").mask("+7 (999) 999-99-99");
             });
 
-            function callBackObject(event) {
-                    var form = document.querySelector('form'); // Получение формы
-                    var isValid = true;
-                    var inputs = form.querySelectorAll('input[required]');
-                    for (var i = 0; i < inputs.length; i++) {
-                        if (inputs[i].value.trim() === '') {
-                            isValid = false;
-                            inputs[i].classList.add('error');
-                        } else {
-                            inputs[i].classList.remove('error');
-                        }
+            $('#NAME').on('input', function() {
+                var that = this;
+                var res = /[^А-Яа-яЁё]/g.exec(that.value);
+                that.value = that.value.replace(res, '');
+            });
+
+            var form = document.querySelector('form');
+
+            function checkform() {
+                var requiredFields = form.querySelectorAll('[required]');
+
+                // Переменная для хранения сообщения об отсутствующих полях
+                var errorMessage = '';
+
+                // Проверяем, заполнены ли все обязательные поля
+                for (var i = 0; i < requiredFields.length; i++) {
+                    if (requiredFields[i].value === '') {
+                        errorMessage += requiredFields[i].getAttribute('name') + ' должно быть заполнено.\n';
                     }
-                    if (isValid) {
-                        window.open('https://t.me/stavbim_bot/', '_blank');
-                    } else {
-                        event.preventDefault(); // Отмена отправки формы, если поля не заполнены
-                    }
+                }
+
+                if (errorMessage !== '') {
+                    alert(errorMessage);
+                } else {
+                    window.open('https://t.me/stavbim_bot/', '_blank');
+                }
             }
 
-            var buttonPay = document.getElementById('buttonPay')
-            buttonPay.addEventListener("click", callBackObject);
+            $(function(){
+                $('#ordercall').on('submit', checkform);
+            });
 
             BeeCartAppObjects.formId = '<?= $formId ?>';
         </script>
