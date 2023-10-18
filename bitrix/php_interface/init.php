@@ -21,4 +21,3 @@ function Prefix_FunctionName() {
         exit();
     }
 }
-?>
