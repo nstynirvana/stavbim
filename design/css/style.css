@@ -7,6 +7,17 @@
     position: relative;
 }
 
+.bc-cart-w-btn-show-cart-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #1A1A1A;
+    transition: 0.3s all;
+}
+
+.bc-cart-w-btn-show-cart-link:hover {
+    color: #777777;
+}
+
 .basket__pay_warning_img {
     width: 24px;
     margin-right: 10px;

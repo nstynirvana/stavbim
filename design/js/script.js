@@ -203,7 +203,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         console.log("Это я сортирую тут все");
 
-
         sendQueryAction(stringToSend, "/my-works/", "sortChange", "POST");
 
         return false;
@@ -289,7 +288,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         catalogGrade2AccordContent.forEach(item => openCatalogGraade2Content(item));
         closeCatalogGraade2Content(catalogGrade2MobileContent);
-
+         console.log('а может здесь')
         catalogGrade2MobileBtn.addEventListener('click', () => {
             catalogGrade2MobileBtn.classList.toggle('active')
             if (catalogGrade2MobileBtn.classList.contains('active')) {
